@@ -80,12 +80,11 @@ const HeroSection = () => {
 
             {/* Main Heading */}
             <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 opacity-0 animate-fade-up"
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-8 opacity-0 animate-fade-up tracking-tight"
               style={{ animationDelay: '0.2s' }}
             >
-              <span className="text-foreground">Kripto</span>
-              <br />
-              <span className="text-primary">Evolucija</span>
+              <span className="text-foreground">Nauči</span>
+              <span className="text-primary"> digitalnu ekonomiju.</span>
             </h1>
 
             {/* Subheading */}
