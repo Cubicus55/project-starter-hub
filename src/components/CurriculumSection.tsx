@@ -1,80 +1,217 @@
-import { Code, Database, Lock, Wallet, Globe, Cpu, LineChart, Shield, Blocks, Coins, Network, GraduationCap } from "lucide-react";
+import { useState } from "react";
+import { 
+  Wallet, Lock, Coins, Blocks, LineChart, Shield, 
+  Globe, Code, Database, Network, Cpu, GraduationCap,
+  ChevronDown, Clock, CheckCircle2
+} from "lucide-react";
+import { LucideIcon } from "lucide-react";
+
+interface Module {
+  icon: LucideIcon;
+  title: string;
+  outcome: string;
+  quiz: string;
+  duration: number;
+}
+
+interface Level {
+  title: string;
+  subtitle: string;
+  modules: Module[];
+}
+
+const levels: Level[] = [
+  {
+    title: "Razina 1",
+    subtitle: "Temelji",
+    modules: [
+      {
+        icon: Blocks,
+        title: "Uvod u blockchain",
+        outcome: "Korisnik će razumjeti kako funkcionira blockchain tehnologija i zašto je revolucionarna.",
+        quiz: "Test razumijevanja temeljnih blockchain koncepata",
+        duration: 45,
+      },
+      {
+        icon: Coins,
+        title: "Kriptovalute osnove",
+        outcome: "Korisnik će znati razlikovati Bitcoin, Ethereum i ostale kriptovalute.",
+        quiz: "Kviz prepoznavanja i usporedbe kriptovaluta",
+        duration: 60,
+      },
+      {
+        icon: Wallet,
+        title: "Kripto novčanici",
+        outcome: "Korisnik će ovladati znanjem korištenja kripto novčanika i sigurnog čuvanja imovine.",
+        quiz: "Praktični test postavljanja i korištenja walleta",
+        duration: 50,
+      },
+      {
+        icon: Lock,
+        title: "Sigurnost i privatnost",
+        outcome: "Korisnik će naučiti osnovne sigurnosne prakse za zaštitu digitalne imovine.",
+        quiz: "Test prepoznavanja sigurnosnih prijetnji",
+        duration: 40,
+      },
+    ],
+  },
+  {
+    title: "Razina 2",
+    subtitle: "Aktivno sudjelovanje",
+    modules: [
+      {
+        icon: LineChart,
+        title: "Trgovanje kriptovalutama",
+        outcome: "Korisnik će razumjeti osnove trgovanja i analize tržišta.",
+        quiz: "Simulacija trgovanja s virtualnim portfeljem",
+        duration: 75,
+      },
+      {
+        icon: Globe,
+        title: "DeFi protokoli",
+        outcome: "Korisnik će znati koristiti decentralizirane financijske aplikacije.",
+        quiz: "Test korištenja DeFi platformi",
+        duration: 65,
+      },
+      {
+        icon: Database,
+        title: "NFT ekosustav",
+        outcome: "Korisnik će razumjeti kreiranje, kupnju i prodaju NFT-ova.",
+        quiz: "Praktični zadatak kreiranja NFT-a",
+        duration: 55,
+      },
+      {
+        icon: Network,
+        title: "DAO organizacije",
+        outcome: "Korisnik će razumjeti decentralizirano upravljanje i glasovanje.",
+        quiz: "Simulacija sudjelovanja u DAO glasovanju",
+        duration: 50,
+      },
+    ],
+  },
+  {
+    title: "Razina 3",
+    subtitle: "Napredni korisnik",
+    modules: [
+      {
+        icon: Code,
+        title: "Smart ugovori",
+        outcome: "Korisnik će razumjeti kako funkcioniraju i kako čitati pametne ugovore.",
+        quiz: "Analiza i audit jednostavnog smart contracta",
+        duration: 90,
+      },
+      {
+        icon: Shield,
+        title: "MiCA regulativa",
+        outcome: "Korisnik će ovladati znanjem EU regulative za kripto imovinu.",
+        quiz: "Test poznavanja MiCA pravnog okvira",
+        duration: 70,
+      },
+      {
+        icon: Cpu,
+        title: "Layer 2 rješenja",
+        outcome: "Korisnik će razumjeti skalabilnost i L2 mreže poput Arbitrum i Optimism.",
+        quiz: "Praktični zadatak bridganja na L2 mrežu",
+        duration: 60,
+      },
+      {
+        icon: GraduationCap,
+        title: "Strategija portfelja",
+        outcome: "Korisnik će znati kreirati i upravljati diversificiranim kripto portfeljem.",
+        quiz: "Izrada osobne investicijske strategije",
+        duration: 80,
+      },
+    ],
+  },
+];
+
+const LevelCard = ({ level, index }: { level: Level; index: number }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
+      {/* Level Header */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+      >
+        <div className="flex items-center gap-4">
+          <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">
+            {index + 1}
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-foreground">{level.title}</h3>
+            <p className="text-primary font-medium">{level.subtitle}</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-sm text-muted-foreground hidden sm:block">
+            {level.modules.length} modula
+          </span>
+          <ChevronDown 
+            className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          />
+        </div>
+      </button>
+
+      {/* Modules */}
+      <div 
+        className={`grid transition-all duration-300 ease-out ${
+          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="p-6 pt-0 grid gap-4 md:grid-cols-2">
+            {level.modules.map((module, moduleIndex) => (
+              <div
+                key={moduleIndex}
+                className="p-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-primary/30 transition-colors"
+              >
+                {/* Module Header */}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <module.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-foreground mb-1">{module.title}</h4>
+                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <Clock className="w-3 h-3" />
+                      <span>{module.duration} min</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Outcome */}
+                <div className="mb-3">
+                  <span className="text-xs font-medium text-primary uppercase tracking-wide">Ishod učenja</span>
+                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                    {module.outcome}
+                  </p>
+                </div>
+
+                {/* Quiz */}
+                <div className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-xs font-medium text-primary">Kviz znanja</span>
+                    <p className="text-xs text-muted-foreground mt-0.5">{module.quiz}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const CurriculumSection = () => {
-  const modules = [
-    {
-      icon: Blocks,
-      title: "Uvod u Blockchain",
-      description: "Temelji blockchain tehnologije, decentralizacija i distribuirani sustavi.",
-      duration: "2 tjedna",
-    },
-    {
-      icon: Coins,
-      title: "Kriptovalute",
-      description: "Bitcoin, Ethereum i altcoini - kako funkcioniraju i zašto su revolucionarni.",
-      duration: "2 tjedna",
-    },
-    {
-      icon: Wallet,
-      title: "Kripto Walleti",
-      description: "Sigurno čuvanje i upravljanje digitalnom imovinom.",
-      duration: "1 tjedan",
-    },
-    {
-      icon: Code,
-      title: "Smart Contracts",
-      description: "Programiranje pametnih ugovora na Ethereum mreži.",
-      duration: "3 tjedna",
-    },
-    {
-      icon: Globe,
-      title: "Web3 Razvoj",
-      description: "Razvoj decentraliziranih aplikacija (dApps) od nule.",
-      duration: "3 tjedna",
-    },
-    {
-      icon: LineChart,
-      title: "DeFi Ekosustav",
-      description: "Decentralizirane financije - lending, staking, yield farming.",
-      duration: "2 tjedna",
-    },
-    {
-      icon: Database,
-      title: "NFT & Metaverse",
-      description: "Digitalna umjetnost, kolekcije i virtualni svjetovi.",
-      duration: "2 tjedna",
-    },
-    {
-      icon: Shield,
-      title: "Sigurnost",
-      description: "Zaštita od napada, sigurnosne prakse i audit smart contracta.",
-      duration: "2 tjedna",
-    },
-    {
-      icon: Lock,
-      title: "Regulativa",
-      description: "Pravni okvir i regulacija kripto industrije u EU.",
-      duration: "1 tjedan",
-    },
-    {
-      icon: Network,
-      title: "DAO Organizacije",
-      description: "Decentralizirane autonomne organizacije i governance.",
-      duration: "1 tjedan",
-    },
-    {
-      icon: Cpu,
-      title: "Layer 2 Rješenja",
-      description: "Skalabilnost blockhaina - Polygon, Arbitrum, Optimism.",
-      duration: "2 tjedna",
-    },
-    {
-      icon: GraduationCap,
-      title: "Završni Projekt",
-      description: "Praktična izrada vlastite Web3 aplikacije.",
-      duration: "3 tjedna",
-    },
-  ];
+  const totalMinutes = levels.reduce(
+    (acc, level) => acc + level.modules.reduce((sum, m) => sum + m.duration, 0),
+    0
+  );
+  const totalHours = Math.round(totalMinutes / 60);
 
   return (
     <section id="curriculum" className="relative py-32 overflow-hidden">
@@ -87,42 +224,25 @@ const CurriculumSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Kurikulum</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            12 modula za <span className="text-gradient">buduće eksperte</span>
+            3 razine za <span className="text-gradient">buduće eksperte</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Sveobuhvatni program koji pokriva sve aspekte blockchain tehnologije i digitalne ekonomije.
+            Strukturirani program koji vas vodi od početnika do naprednog korisnika digitalne ekonomije.
           </p>
         </div>
 
-        {/* Modules Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {modules.map((module, index) => (
-            <div
-              key={index}
-              className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 card-hover cursor-default"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <module.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">
-                {module.title}
-              </h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {module.description}
-              </p>
-              <span className="text-xs font-medium text-primary/80 bg-primary/10 px-3 py-1 rounded-full">
-                {module.duration}
-              </span>
-            </div>
+        {/* Levels */}
+        <div className="max-w-4xl mx-auto space-y-4">
+          {levels.map((level, index) => (
+            <LevelCard key={index} level={level} index={index} />
           ))}
         </div>
 
         {/* Total Duration */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-card border border-border">
+          <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
             <span className="text-muted-foreground">Ukupno trajanje programa:</span>
-            <span className="font-bold text-primary text-lg">24 tjedna</span>
+            <span className="font-bold text-primary text-lg">~{totalHours} sati</span>
           </div>
         </div>
       </div>
