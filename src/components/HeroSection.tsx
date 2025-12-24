@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Terminal } from "lucide-react";
-import ParticleText from "./ParticleText";
 import { useEffect, useState } from "react";
 
 const TerminalCard = () => {
@@ -79,13 +78,15 @@ const HeroSection = () => {
               <span className="text-primary font-semibold text-sm tracking-wide">UPISI U TIJEKU ZA 2025.</span>
             </div>
 
-            {/* Main Heading - Particle Canvas */}
-            <div 
-              className="mb-8 opacity-0 animate-fade-up"
+            {/* Main Heading */}
+            <h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 opacity-0 animate-fade-up"
               style={{ animationDelay: '0.2s' }}
             >
-              <ParticleText />
-            </div>
+              <span className="text-foreground">Kripto</span>
+              <br />
+              <span className="text-primary">Evolucija</span>
+            </h1>
 
             {/* Subheading */}
             <p 
