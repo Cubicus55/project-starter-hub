@@ -67,7 +67,7 @@ const ParticleText = () => {
 
     // Create particles from pixels
     const particles: Particle[] = [];
-    const gap = 3;
+    const gap = 2; // Smaller gap = denser particles
 
     for (let y = 0; y < canvas.height; y += gap * dpr) {
       for (let x = 0; x < canvas.width; x += gap * dpr) {
@@ -85,7 +85,7 @@ const ParticleText = () => {
             originX: x / dpr,
             originY: y / dpr,
             color: `rgb(${r}, ${g}, ${b})`,
-            size: 1.5,
+            size: 2,
             vx: 0,
             vy: 0,
           });
