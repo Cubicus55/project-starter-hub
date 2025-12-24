@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { CheckCircle, Send, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -11,6 +12,8 @@ const ApplicationForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [gdprAccepted, setGdprAccepted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,7 +60,7 @@ const ApplicationForm = () => {
   }
 
   return (
-    <section id="apply" className="relative py-24 overflow-hidden">
+    <section id="apply" className="relative py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
@@ -177,10 +180,37 @@ const ApplicationForm = () => {
                     />
                   </div>
 
+                  <div className="space-y-4 pt-2">
+                    <div className="flex items-start gap-3">
+                      <Checkbox 
+                        id="terms" 
+                        checked={termsAccepted}
+                        onCheckedChange={(checked) => setTermsAccepted(checked as boolean)}
+                        required
+                        className="mt-1"
+                      />
+                      <Label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Prihvaćam <a href="#" className="text-primary hover:underline">Uvjete poslovanja</a> *
+                      </Label>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Checkbox 
+                        id="gdpr" 
+                        checked={gdprAccepted}
+                        onCheckedChange={(checked) => setGdprAccepted(checked as boolean)}
+                        required
+                        className="mt-1"
+                      />
+                      <Label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Dajem privolu za obradu osobnih podataka u skladu s <a href="#" className="text-primary hover:underline">GDPR politikom</a> *
+                      </Label>
+                    </div>
+                  </div>
+
                   <Button 
                     type="submit" 
                     size="lg"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !termsAccepted || !gdprAccepted}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg"
                   >
                     {isSubmitting ? (
@@ -195,13 +225,6 @@ const ApplicationForm = () => {
                       </span>
                     )}
                   </Button>
-
-                  <p className="text-sm text-muted-foreground text-center">
-                    Slanjem prijave prihvaćate naše{" "}
-                    <a href="#" className="text-primary hover:underline">uvjete korištenja</a>
-                    {" "}i{" "}
-                    <a href="#" className="text-primary hover:underline">politiku privatnosti</a>.
-                  </p>
                 </div>
               </form>
             </div>

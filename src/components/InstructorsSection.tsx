@@ -33,7 +33,7 @@ const InstructorsSection = () => {
   ];
 
   return (
-    <section id="instructors" className="relative py-24 overflow-hidden">
+    <section id="instructors" className="relative py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0" style={{ background: 'var(--gradient-glow)' }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />

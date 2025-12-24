@@ -57,8 +57,17 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Company Info */}
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="text-center text-sm text-muted-foreground mb-6">
+            <p className="font-medium text-foreground mb-2">Block3 j.d.o.o.</p>
+            <p>MBS: 081234567 | OIB: 12345678901</p>
+            <p>Trgovački sud u Zagrebu</p>
+          </div>
+        </div>
+
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Blok3 Akademija. Sva prava pridržana.
           </p>
