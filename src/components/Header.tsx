@@ -6,30 +6,29 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#hero", label: "Početna" },
-    { href: "#curriculum", label: "Kurikulum" },
-    { href: "#instructors", label: "Predavači" },
-    { href: "#apply", label: "Prijava" },
+    { href: "#about", label: "O PROGRAMU" },
+    { href: "#curriculum", label: "KURIKULUM" },
+    { href: "#instructors", label: "PREDAVAČI" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">B3</span>
+            <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center">
+              <span className="text-foreground font-bold text-sm">B3</span>
             </div>
-            <span className="font-bold text-xl text-foreground hidden sm:block">Blok3 Akademija</span>
+            <span className="font-bold text-xl text-foreground">BLOK3</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm tracking-wide"
               >
                 {link.label}
               </a>
@@ -37,7 +36,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-lg">
               <a href="#apply">Prijavi se</a>
             </Button>
           </div>
@@ -59,7 +58,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                  className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 text-sm tracking-wide"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
