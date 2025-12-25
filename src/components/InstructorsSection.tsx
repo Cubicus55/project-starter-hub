@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Linkedin, ExternalLink, X } from "lucide-react";
+import { Linkedin, Youtube, ExternalLink, X } from "lucide-react";
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import vedranImg from "@/assets/vedran.png";
 import veljkoImg from "@/assets/veljko.png";
@@ -15,7 +15,10 @@ const InstructorsSection = () => {
       role: "Blockchain Edukator",
       bio: "Osnivač Moj Kripto platforme. Stručnjak za kripto edukaciju i blockchain tehnologiju.",
       image: vedranImg,
-      socials: { linkedin: "#" },
+      socials: { 
+        linkedin: "https://www.linkedin.com/in/vedran-mijatovic/",
+        youtube: "https://www.youtube.com/@mojkripto"
+      },
     },
     {
       name: "Veljko Skenderija",
@@ -23,7 +26,10 @@ const InstructorsSection = () => {
       role: "Kripto Analitičar",
       bio: "Voditelj Cryptoverse projekta. Specijalizacija za kripto tržišta i analizu.",
       image: veljkoImg,
-      socials: { linkedin: "#" },
+      socials: { 
+        linkedin: "https://www.linkedin.com/in/veljko-skenderija-23b058137/",
+        youtube: "https://www.youtube.com/@cryptoverse2022"
+      },
     },
     {
       name: "Dean Rogulja",
@@ -31,7 +37,10 @@ const InstructorsSection = () => {
       role: "Web3 Stručnjak",
       bio: "Osnivač Kripto Evolucija projekta. Ekspert za decentralizirane tehnologije.",
       image: deanImg,
-      socials: { linkedin: "#" },
+      socials: { 
+        linkedin: "https://www.linkedin.com/in/dean-valentine-rogulja-560a122a3/",
+        youtube: "https://www.youtube.com/@KriptoEvolucija"
+      },
     },
   ];
 
@@ -97,9 +106,21 @@ const InstructorsSection = () => {
                   {instructor.socials.linkedin && (
                     <a 
                       href={instructor.socials.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
                       <Linkedin className="w-4 h-4" />
+                    </a>
+                  )}
+                  {instructor.socials.youtube && (
+                    <a 
+                      href={instructor.socials.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                    >
+                      <Youtube className="w-4 h-4" />
                     </a>
                   )}
                 </div>
