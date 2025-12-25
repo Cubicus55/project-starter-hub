@@ -1,4 +1,5 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, MapPin, Phone, AlertTriangle } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,24 +58,73 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company Info */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="text-center text-sm text-muted-foreground mb-6">
-            <p className="font-medium text-foreground mb-2">Block3 j.d.o.o.</p>
-            <p>MBS: 081234567 | OIB: 12345678901</p>
-            <p>Trgovački sud u Zagrebu</p>
+        {/* NFA Disclaimer */}
+        <div className="mt-12 p-6 rounded-xl bg-destructive/10 border border-destructive/20">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+            <div>
+              <h4 className="font-semibold text-foreground mb-2">Odricanje od odgovornosti (NFA - Not Financial Advice)</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Sadržaj Blok3 Akademije je isključivo edukativne prirode i ne predstavlja financijski, investicijski ili pravni savjet. 
+                Nismo registrirani financijski savjetnici niti investicijski savjetnici. Investiranje u kriptovalute i blockchain projekte 
+                nosi značajan rizik gubitka kapitala. Prije donošenja bilo kakvih investicijskih odluka, savjetujte se s licenciranim 
+                financijskim savjetnikom. Prošli rezultati ne garantiraju buduće prinose.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* Company Info */}
+        <div className="mt-8 pt-8 border-t border-border">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="text-sm text-muted-foreground">
+              <p className="font-semibold text-foreground mb-2">Blok3 Akademija d.o.o.</p>
+              <p>Ulica blockchain tehnologije 42, 10000 Zagreb, Hrvatska</p>
+              <p className="mt-2">
+                <span className="text-foreground">MBS:</span> 081234567 | 
+                <span className="text-foreground ml-2">OIB:</span> 12345678901
+              </p>
+              <p>
+                <span className="text-foreground">Temeljni kapital:</span> 20.000,00 EUR (uplaćen u cijelosti)
+              </p>
+              <p>
+                <span className="text-foreground">Član uprave:</span> Ivan Horvat, direktor
+              </p>
+              <p>
+                <span className="text-foreground">Sud:</span> Trgovački sud u Zagrebu
+              </p>
+            </div>
+            <div className="text-sm text-muted-foreground">
+              <p className="font-semibold text-foreground mb-2">Informacije o plaćanju</p>
+              <p>Sve cijene su izražene u EUR i uključuju PDV.</p>
+              <p className="mt-2">
+                <span className="text-foreground">Načini plaćanja:</span> Transakcijski račun, kreditne/debitne kartice (Visa, Mastercard)
+              </p>
+              <p>
+                <span className="text-foreground">IBAN:</span> HR1234567890123456789
+              </p>
+              <p className="mt-2 text-xs">
+                Za svaku uplatu izdaje se fiskalizirani račun u skladu sa Zakonom o fiskalizaciji.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Legal Links & Copyright */}
+        <div className="mt-8 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Blok3 Akademija. Sva prava pridržana.
+            © {currentYear} Blok3 Akademija d.o.o. Sva prava pridržana.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Uvjeti korištenja</a>
-            <a href="#" className="hover:text-primary transition-colors">Privatnost</a>
-            <a href="#" className="hover:text-primary transition-colors">Kolačići</a>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+            <Link to="/uvjeti-poslovanja" className="hover:text-primary transition-colors">
+              Uvjeti poslovanja
+            </Link>
+            <Link to="/politika-privatnosti" className="hover:text-primary transition-colors">
+              Politika privatnosti
+            </Link>
+            <Link to="/politika-kolacica" className="hover:text-primary transition-colors">
+              Politika kolačića
+            </Link>
           </div>
         </div>
       </div>

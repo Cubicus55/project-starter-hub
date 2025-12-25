@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,10 +14,20 @@ const ApplicationForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [gdprAccepted, setGdprAccepted] = useState(false);
+  const [marketingAccepted, setMarketingAccepted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!termsAccepted) {
+      toast({
+        title: "Potrebna privola",
+        description: "Morate prihvatiti Uvjete poslovanja i Politiku privatnosti.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     // Simulate form submission
@@ -105,6 +116,15 @@ const ApplicationForm = () => {
                     <span className="text-muted-foreground line-through">€1,999</span>
                   </div>
                   <p className="text-sm text-primary mt-1">Rani upis - uštedi 25%</p>
+                  <p className="text-xs text-muted-foreground mt-2">Cijene uključuju PDV</p>
+                </div>
+
+                {/* NFA Mini Disclaimer */}
+                <div className="mt-6 p-3 rounded-lg bg-destructive/10 border border-destructive/20">
+                  <p className="text-xs text-muted-foreground">
+                    <strong className="text-foreground">Napomena:</strong> Sadržaj je edukativne prirode i ne 
+                    predstavlja financijski savjet. Investiranje nosi rizik gubitka kapitala.
+                  </p>
                 </div>
               </div>
             </div>
@@ -180,37 +200,54 @@ const ApplicationForm = () => {
                     />
                   </div>
 
-                  <div className="space-y-4 pt-2">
+                  {/* Consent Checkboxes */}
+                  <div className="space-y-4 pt-4 border-t border-border">
+                    <p className="text-sm font-medium text-foreground">Privole</p>
+                    
+                    {/* Required: Terms & Privacy */}
                     <div className="flex items-start gap-3">
                       <Checkbox 
                         id="terms" 
                         checked={termsAccepted}
                         onCheckedChange={(checked) => setTermsAccepted(checked as boolean)}
-                        required
                         className="mt-1"
                       />
                       <Label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                        Prihvaćam <a href="#" className="text-primary hover:underline">Uvjete poslovanja</a> *
+                        Prihvaćam{" "}
+                        <Link to="/uvjeti-poslovanja" className="text-primary hover:underline" target="_blank">
+                          Uvjete poslovanja
+                        </Link>{" "}
+                        i{" "}
+                        <Link to="/politika-privatnosti" className="text-primary hover:underline" target="_blank">
+                          Politiku privatnosti
+                        </Link>{" "}
+                        <span className="text-destructive">*</span>
                       </Label>
                     </div>
+                    
+                    {/* Optional: Marketing */}
                     <div className="flex items-start gap-3">
                       <Checkbox 
-                        id="gdpr" 
-                        checked={gdprAccepted}
-                        onCheckedChange={(checked) => setGdprAccepted(checked as boolean)}
-                        required
+                        id="marketing" 
+                        checked={marketingAccepted}
+                        onCheckedChange={(checked) => setMarketingAccepted(checked as boolean)}
                         className="mt-1"
                       />
-                      <Label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                        Dajem privolu za obradu osobnih podataka u skladu s <a href="#" className="text-primary hover:underline">GDPR politikom</a> *
+                      <Label htmlFor="marketing" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Želim primati obavijesti o novim tečajevima, promotivnim ponudama i novostima iz 
+                        blockchain svijeta. (opcionalno)
                       </Label>
                     </div>
+                    
+                    <p className="text-xs text-muted-foreground">
+                      * Polja označena zvjezdicom su obavezna. Privolu možete povući u bilo kojem trenutku.
+                    </p>
                   </div>
 
                   <Button 
                     type="submit" 
                     size="lg"
-                    disabled={isSubmitting || !termsAccepted || !gdprAccepted}
+                    disabled={isSubmitting || !termsAccepted}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg"
                   >
                     {isSubmitting ? (
