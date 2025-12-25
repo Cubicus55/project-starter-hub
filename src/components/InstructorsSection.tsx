@@ -1,34 +1,37 @@
-import { Linkedin, Twitter, Globe } from "lucide-react";
+import { useState } from "react";
+import { Linkedin, ExternalLink, X } from "lucide-react";
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
+import vedranImg from "@/assets/vedran.png";
+import veljkoImg from "@/assets/veljko.png";
+import deanImg from "@/assets/dean.png";
 
 const InstructorsSection = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const instructors = [
     {
-      name: "Dr. Marko Horvat",
-      role: "Blockchain Arhitekt",
-      bio: "15+ godina iskustva u softveru. Vodio razvoj blockchain rješenja za Fortune 500 kompanije.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      socials: { linkedin: "#", twitter: "#" },
+      name: "Vedran Mijatović",
+      project: "Moj Kripto",
+      role: "Blockchain Edukator",
+      bio: "Osnivač Moj Kripto platforme. Stručnjak za kripto edukaciju i blockchain tehnologiju.",
+      image: vedranImg,
+      socials: { linkedin: "#" },
     },
     {
-      name: "Ana Petković",
-      role: "DeFi Stručnjakinja",
-      bio: "Bivša voditeljica proizvoda u Aave protokolu. Specijalizacija za decentralizirane financije.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
-      socials: { linkedin: "#", twitter: "#", website: "#" },
+      name: "Veljko Skenderija",
+      project: "Cryptoverse",
+      role: "Kripto Analitičar",
+      bio: "Voditelj Cryptoverse projekta. Specijalizacija za kripto tržišta i analizu.",
+      image: veljkoImg,
+      socials: { linkedin: "#" },
     },
     {
-      name: "Ivan Marić",
-      role: "Smart Contract Developer",
-      bio: "Solidity developer s 5+ godina iskustva. Sudjelovao u auditu 50+ smart contracta.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      socials: { linkedin: "#", twitter: "#" },
-    },
-    {
-      name: "Lana Tomić",
-      role: "Web3 Product Manager",
-      bio: "Vodila razvoj NFT platformi i metaverse projekata. Ex-ConsenSys.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      socials: { linkedin: "#", website: "#" },
+      name: "Dean Rogulja",
+      project: "Kripto Evolucija",
+      role: "Web3 Stručnjak",
+      bio: "Osnivač Kripto Evolucija projekta. Ekspert za decentralizirane tehnologije.",
+      image: deanImg,
+      socials: { linkedin: "#" },
     },
   ];
 
@@ -51,26 +54,40 @@ const InstructorsSection = () => {
         </div>
 
         {/* Instructors Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {instructors.map((instructor, index) => (
             <div
               key={index}
               className="group relative rounded-2xl overflow-hidden bg-gradient-card border border-border card-hover"
             >
               {/* Image */}
-              <div className="aspect-square overflow-hidden">
+              <div 
+                className="aspect-square overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage(instructor.image)}
+              >
                 <img
                   src={instructor.image}
                   alt={instructor.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                
+                {/* Zoom hint on hover */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-background/80 backdrop-blur-sm rounded-full p-3">
+                    <ExternalLink className="w-6 h-6 text-primary" />
+                  </div>
+                </div>
               </div>
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="text-primary text-sm font-medium">{instructor.role}</span>
-                <h3 className="text-xl font-bold text-foreground mt-1">{instructor.name}</h3>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-primary text-sm font-medium">{instructor.role}</span>
+                  <span className="text-muted-foreground text-xs">•</span>
+                  <span className="text-muted-foreground text-xs">{instructor.project}</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground">{instructor.name}</h3>
                 <p className="text-muted-foreground text-sm mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {instructor.bio}
                 </p>
@@ -85,28 +102,29 @@ const InstructorsSection = () => {
                       <Linkedin className="w-4 h-4" />
                     </a>
                   )}
-                  {instructor.socials.twitter && (
-                    <a 
-                      href={instructor.socials.twitter}
-                      className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Twitter className="w-4 h-4" />
-                    </a>
-                  )}
-                  {instructor.socials.website && (
-                    <a 
-                      href={instructor.socials.website}
-                      className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Globe className="w-4 h-4" />
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Image Lightbox Dialog */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
+          <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-background/80 backdrop-blur-sm p-2 hover:bg-background transition-colors">
+            <X className="h-6 w-6" />
+            <span className="sr-only">Zatvori</span>
+          </DialogClose>
+          {selectedImage && (
+            <img
+              src={selectedImage}
+              alt="Predavač"
+              className="w-full h-auto rounded-lg"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
