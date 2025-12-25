@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import blok3Logo from "@/assets/blok3-logo-transparent.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,9 +17,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center">
-              <span className="text-foreground font-bold text-sm">B3</span>
-            </div>
+            <img src={blok3Logo} alt="Blok3 Logo" className="h-10 w-auto" />
             <span className="font-bold text-xl text-foreground">BLOK3</span>
           </a>
 
