@@ -133,19 +133,19 @@ const LevelCard = ({ level, index }: { level: Level; index: number }) => {
       {/* Level Header */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+        className="w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
       >
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold text-lg sm:text-xl">
             {index + 1}
           </div>
           <div>
-            <h3 className="text-xl font-bold text-foreground">{level.title}</h3>
-            <p className="text-primary font-medium">{level.subtitle}</p>
+            <h3 className="text-base sm:text-xl font-bold text-foreground">{level.title}</h3>
+            <p className="text-primary font-medium text-sm sm:text-base">{level.subtitle}</p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-muted-foreground hidden sm:block">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <span className="text-xs sm:text-sm text-muted-foreground hidden sm:block">
             {level.modules.length} modula
           </span>
           <ChevronDown 
@@ -161,7 +161,7 @@ const LevelCard = ({ level, index }: { level: Level; index: number }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="p-6 pt-0 grid gap-4 md:grid-cols-2">
+          <div className="p-4 sm:p-6 pt-0 grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2">
             {level.modules.map((module, moduleIndex) => (
               <div
                 key={moduleIndex}
@@ -214,19 +214,19 @@ const CurriculumSection = () => {
   const totalHours = Math.round(totalMinutes / 60);
 
   return (
-    <section id="curriculum" className="relative py-32 overflow-hidden">
+    <section id="curriculum" className="relative py-16 md:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Kurikulum</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-4 mb-4 md:mb-6">
             3 razine za <span className="text-gradient">buduće eksperte</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base md:text-lg px-2">
             Strukturirani program koji vas vodi od početnika do naprednog korisnika digitalne ekonomije.
           </p>
         </div>

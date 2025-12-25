@@ -45,25 +45,25 @@ const InstructorsSection = () => {
   ];
 
   return (
-    <section id="instructors" className="relative py-32 overflow-hidden">
+    <section id="instructors" className="relative py-16 md:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0" style={{ background: 'var(--gradient-glow)' }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       
       <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Predavači</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-4 mb-4 md:mb-6">
             Uči od <span className="text-gradient">najboljih u industriji</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base md:text-lg px-4">
             Naši predavači su praktičari s godinama iskustva u blockchain industriji.
           </p>
         </div>
 
         {/* Instructors Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
           {instructors.map((instructor, index) => (
             <div
               key={index}
@@ -90,14 +90,14 @@ const InstructorsSection = () => {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-primary text-sm font-medium">{instructor.role}</span>
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                  <span className="text-primary text-xs sm:text-sm font-medium">{instructor.role}</span>
                   <span className="text-muted-foreground text-xs">•</span>
                   <span className="text-muted-foreground text-xs">{instructor.project}</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground">{instructor.name}</h3>
-                <p className="text-muted-foreground text-sm mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">{instructor.name}</h3>
+                <p className="text-muted-foreground text-xs sm:text-sm mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
                   {instructor.bio}
                 </p>
 
