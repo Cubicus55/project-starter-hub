@@ -53,22 +53,20 @@ const CookieBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4 md:p-6">
       <div className="container max-w-4xl mx-auto">
-        <div className="bg-card border border-border rounded-2xl shadow-2xl overflow-hidden">
-          <div className="p-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <Cookie className="w-6 h-6 text-primary" />
+        <div className="bg-card border border-border rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden">
+          <div className="p-4 sm:p-6">
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 hidden sm:flex">
+                <Cookie className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+              <div className="flex-1 min-w-0">
+                <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">
                   Koristimo kolačiće
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Koristimo kolačiće za poboljšanje vašeg iskustva na našoj stranici, analizu prometa i 
-                  prikazivanje relevantnih oglasa. Možete prihvatiti sve kolačiće, odbiti one koji nisu 
-                  nužni ili prilagoditi svoje postavke.{" "}
+                <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">
+                  Koristimo kolačiće za poboljšanje vašeg iskustva, analizu prometa i prikazivanje relevantnih oglasa.{" "}
                   <Link to="/politika-kolacica" className="text-primary hover:underline">
                     Saznaj više
                   </Link>
@@ -122,25 +120,25 @@ const CookieBanner = () => {
                   </div>
                 )}
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {showSettings ? (
                     <>
-                      <Button onClick={savePreferences} className="bg-primary hover:bg-primary/90">
-                        Spremi postavke
+                      <Button onClick={savePreferences} size="sm" className="bg-primary hover:bg-primary/90 text-xs sm:text-sm">
+                        Spremi
                       </Button>
-                      <Button variant="outline" onClick={() => setShowSettings(false)}>
+                      <Button variant="outline" size="sm" onClick={() => setShowSettings(false)} className="text-xs sm:text-sm">
                         Natrag
                       </Button>
                     </>
                   ) : (
                     <>
-                      <Button onClick={acceptAll} className="bg-primary hover:bg-primary/90">
+                      <Button onClick={acceptAll} size="sm" className="bg-primary hover:bg-primary/90 text-xs sm:text-sm">
                         Prihvati sve
                       </Button>
-                      <Button variant="outline" onClick={rejectNonEssential}>
+                      <Button variant="outline" size="sm" onClick={rejectNonEssential} className="text-xs sm:text-sm">
                         Samo nužni
                       </Button>
-                      <Button variant="ghost" onClick={() => setShowSettings(true)} className="text-muted-foreground">
+                      <Button variant="ghost" size="sm" onClick={() => setShowSettings(true)} className="text-muted-foreground text-xs sm:text-sm hidden sm:inline-flex">
                         Prilagodi
                       </Button>
                     </>

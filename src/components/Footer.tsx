@@ -6,20 +6,20 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-card border-t border-border">
-      <div className="container px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="container px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">B3</span>
               </div>
               <span className="font-bold text-xl text-foreground">Blok3 Akademija</span>
             </div>
-            <p className="text-muted-foreground max-w-md mb-6">
+            <p className="text-muted-foreground max-w-md mb-6 text-sm md:text-base">
               Vodeći program za blockchain i Web3 edukaciju u regiji. Pripremamo te za budućnost digitalne ekonomije.
             </p>
-            <div className="flex gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-4 md:gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
               <a href="#" className="hover:text-primary transition-colors">Twitter</a>
               <a href="#" className="hover:text-primary transition-colors">Discord</a>
@@ -59,30 +59,29 @@ const Footer = () => {
         </div>
 
         {/* NFA Disclaimer */}
-        <div className="mt-12 p-6 rounded-xl bg-destructive/10 border border-destructive/20">
+        <div className="mt-8 md:mt-12 p-4 md:p-6 rounded-xl bg-destructive/10 border border-destructive/20">
           <div className="flex items-start gap-3">
             <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-semibold text-foreground mb-2">Odricanje od odgovornosti (NFA - Not Financial Advice)</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">Odricanje od odgovornosti (NFA)</h4>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Sadržaj Blok3 Akademije je isključivo edukativne prirode i ne predstavlja financijski, investicijski ili pravni savjet. 
-                Nismo registrirani financijski savjetnici niti investicijski savjetnici. Investiranje u kriptovalute i blockchain projekte 
-                nosi značajan rizik gubitka kapitala. Prije donošenja bilo kakvih investicijskih odluka, savjetujte se s licenciranim 
-                financijskim savjetnikom. Prošli rezultati ne garantiraju buduće prinose.
+                Nismo registrirani financijski savjetnici. Investiranje u kriptovalute nosi značajan rizik gubitka kapitala. 
+                Savjetujte se s licenciranim financijskim savjetnikom prije donošenja investicijskih odluka.
               </p>
             </div>
           </div>
         </div>
 
         {/* Company Info */}
-        <div className="mt-8 pt-8 border-t border-border">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="text-sm text-muted-foreground">
+        <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="text-xs md:text-sm text-muted-foreground">
               <p className="font-semibold text-foreground mb-2">Blok3 Akademija d.o.o.</p>
               <p>Ulica blockchain tehnologije 42, 10000 Zagreb, Hrvatska</p>
               <p className="mt-2">
                 <span className="text-foreground">MBS:</span> 081234567 | 
-                <span className="text-foreground ml-2">OIB:</span> 12345678901
+                <span className="text-foreground ml-1 md:ml-2">OIB:</span> 12345678901
               </p>
               <p>
                 <span className="text-foreground">Temeljni kapital:</span> 20.000,00 EUR (uplaćen u cijelosti)
@@ -94,11 +93,11 @@ const Footer = () => {
                 <span className="text-foreground">Sud:</span> Trgovački sud u Zagrebu
               </p>
             </div>
-            <div className="text-sm text-muted-foreground">
+            <div className="text-xs md:text-sm text-muted-foreground">
               <p className="font-semibold text-foreground mb-2">Informacije o plaćanju</p>
               <p>Sve cijene su izražene u EUR i uključuju PDV.</p>
               <p className="mt-2">
-                <span className="text-foreground">Načini plaćanja:</span> Transakcijski račun, kreditne/debitne kartice (Visa, Mastercard)
+                <span className="text-foreground">Načini plaćanja:</span> Transakcijski račun, kartice (Visa, Mastercard)
               </p>
               <p>
                 <span className="text-foreground">IBAN:</span> HR1234567890123456789
@@ -111,11 +110,11 @@ const Footer = () => {
         </div>
 
         {/* Legal Links & Copyright */}
-        <div className="mt-8 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-6 md:mt-8 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs md:text-sm text-muted-foreground text-center md:text-left">
             © {currentYear} Blok3 Akademija d.o.o. Sva prava pridržana.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground">
             <Link to="/uvjeti-poslovanja" className="hover:text-primary transition-colors">
               Uvjeti poslovanja
             </Link>
