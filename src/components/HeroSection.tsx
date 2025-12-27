@@ -69,14 +69,6 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="max-w-2xl">
-            {/* Badge */}
-            <div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-up"
-              style={{ animationDelay: '0.1s' }}
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-primary font-semibold text-sm tracking-wide">UPISI U TIJEKU ZA 2025.</span>
-            </div>
 
             {/* Main Heading */}
             <h1 
