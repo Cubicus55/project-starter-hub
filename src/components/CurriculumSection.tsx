@@ -272,8 +272,8 @@ const CurriculumSection = () => {
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     Po završetku programa dobivate <strong className="text-foreground">Soulbound Token</strong> - 
-                    NFT certifikat koji je trajno vezan uz vaš kripto novčanik. 
-                    Neprenositv, neizbriv i verificiran na blockchainu kao dokaz vašeg znanja.
+                    NFT certifikat koji je trajno vezan uz vašu kripto adresu. 
+                    Neprenosiv, neizbriv i verificiran na blockchainu kao dokaz vašeg znanja.
                   </p>
                   <ul className="space-y-3 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2 justify-center md:justify-start">
