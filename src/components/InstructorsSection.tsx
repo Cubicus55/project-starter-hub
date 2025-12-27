@@ -35,7 +35,7 @@ const InstructorsSection = () => {
       name: "Dean Rogulja",
       project: "Kripto Evolucija",
       role: "Web3 Stručnjak",
-      bio: "Osnivač Kripto Evolucija projekta. Ekspert za decentralizirane tehnologije.",
+      bio: "Osnivač Kripto Evolucija projekta. Ekspert za tehničku analizu i ulaganje.",
       image: deanImg,
       socials: { 
         linkedin: "https://www.linkedin.com/in/dean-valentine-rogulja-560a122a3/",
@@ -55,7 +55,7 @@ const InstructorsSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Predavači</span>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-4 mb-4 md:mb-6">
-            Uči od <span className="text-gradient">najboljih u industriji</span>
+            Tvoji mentori kroz <span className="text-gradient">kripto edukaciju</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg px-4">
             Naši predavači su praktičari s godinama iskustva u blockchain industriji.

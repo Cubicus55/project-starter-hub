@@ -242,7 +242,7 @@ const CurriculumSection = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
             <span className="text-muted-foreground">Ukupno trajanje programa:</span>
-            <span className="font-bold text-primary text-lg">~{totalHours} sati</span>
+            <span className="font-bold text-primary text-lg">~7 sati</span>
           </div>
         </div>
       </div>

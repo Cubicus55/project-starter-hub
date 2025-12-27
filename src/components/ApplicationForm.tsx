@@ -112,10 +112,9 @@ const ApplicationForm = () => {
                 <div className="mt-8 pt-6 border-t border-border">
                   <div className="text-sm text-muted-foreground mb-2">Cijena programa</div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-bold text-foreground">€1,499</span>
-                    <span className="text-muted-foreground line-through">€1,999</span>
+                    <span className="text-3xl font-bold text-foreground">€150</span>
+                    <span className="text-muted-foreground">po razini</span>
                   </div>
-                  <p className="text-sm text-primary mt-1">Rani upis - uštedi 25%</p>
                   <p className="text-xs text-muted-foreground mt-2">Cijene uključuju PDV</p>
                 </div>
 
