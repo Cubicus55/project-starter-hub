@@ -5,6 +5,7 @@ import {
   ChevronDown, Clock, CheckCircle2
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import soulboundToken from "@/assets/soulbound-token.png";
 
 interface Module {
   icon: LucideIcon;
@@ -243,6 +244,54 @@ const CurriculumSection = () => {
           <div className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
             <span className="text-muted-foreground">Ukupno trajanje programa:</span>
             <span className="font-bold text-primary text-lg">~7 sati</span>
+          </div>
+        </div>
+
+        {/* Soulbound Token Section */}
+        <div className="mt-16 md:mt-24">
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Token Image */}
+                <div className="flex justify-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
+                    <img 
+                      src={soulboundToken} 
+                      alt="BLOK3 Soulbound Token certifikat" 
+                      className="relative w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-float"
+                    />
+                  </div>
+                </div>
+                
+                {/* Token Info */}
+                <div className="text-center md:text-left">
+                  <span className="text-primary font-semibold text-sm uppercase tracking-wider">NFT Certifikat</span>
+                  <h3 className="text-2xl md:text-3xl font-bold mt-3 mb-4">
+                    Soulbound Token
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Po završetku programa dobivate <strong className="text-foreground">Soulbound Token</strong> - 
+                    NFT certifikat koji je trajno vezan uz vaš kripto novčanik. 
+                    Neprenositv, neizbriv i verificiran na blockchainu kao dokaz vašeg znanja.
+                  </p>
+                  <ul className="space-y-3 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2 justify-center md:justify-start">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                      <span>Trajno vezan uz vašu blockchain adresu</span>
+                    </li>
+                    <li className="flex items-center gap-2 justify-center md:justify-start">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                      <span>Verificiran i javno dostupan</span>
+                    </li>
+                    <li className="flex items-center gap-2 justify-center md:justify-start">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                      <span>Dokaz kompetencije za poslodavce</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
