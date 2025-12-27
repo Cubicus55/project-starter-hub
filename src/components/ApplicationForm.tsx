@@ -82,7 +82,7 @@ const ApplicationForm = () => {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Prijava</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Postani dio <span className="text-gradient">Blok3 zajednice</span>
+            Obrazuj se za <span className="text-gradient">digitalnu budućnost</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Ispuni formu i započni svoju transformaciju u Web3 stručnjaka.
