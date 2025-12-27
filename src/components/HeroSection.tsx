@@ -6,10 +6,10 @@ const TerminalCard = () => {
   const [visibleLines, setVisibleLines] = useState(0);
   
   const lines = [
-    { text: "Povezivanje s Moj Kripto...", typing: true },
-    { text: "Učitavanje Cryptoverse protokola...", typing: true },
-    { text: "Aktiviranje Kripto Evolucija analitike...", typing: true },
-    { text: "Sustav spreman. Budućnost je digitalna.", success: true },
+    { text: "Učitavam znanje o Bitcoinu...", typing: true },
+    { text: "Otkrivam tajne blockchaina...", typing: true },
+    { text: "Aktiviram DeFi protokole...", typing: true },
+    { text: "Znanje učitano. Spreman za budućnost!", success: true },
   ];
 
   useEffect(() => {
