@@ -19,9 +19,9 @@ const PrivacyPage = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">1. Voditelj obrade podataka</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Voditelj obrade vaših osobnih podataka je Blok3 Akademija d.o.o., Ulica blockchain tehnologije 42, 
-                10000 Zagreb, OIB: 12345678901. Za sva pitanja vezana uz obradu osobnih podataka možete nas 
-                kontaktirati na: privacy@blok3.academy
+                Voditelj obrade vaših osobnih podataka je DIGITALNA EVOLUCIJA, obrt za savjetovanje i edukaciju, 
+                vl. Dean Valentine Rogulja, Petrinja, Brezje 14, OIB: 00000000. Za sva pitanja vezana uz obradu 
+                osobnih podataka možete nas kontaktirati na: info@blok3.eu
               </p>
             </section>
 
@@ -103,7 +103,7 @@ const PrivacyPage = () => {
                 <li><strong>Pravo na povlačenje privole:</strong> možete povući privolu u bilo kojem trenutku</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Za ostvarivanje svojih prava, kontaktirajte nas na: privacy@blok3.academy
+                Za ostvarivanje svojih prava, kontaktirajte nas na: info@blok3.eu
               </p>
             </section>
 
@@ -131,9 +131,9 @@ const PrivacyPage = () => {
                 Za sva pitanja vezana uz ovu Politiku privatnosti, obratite nam se na:
               </p>
               <ul className="text-muted-foreground mt-2 space-y-1">
-                <li>Email: privacy@blok3.academy</li>
-                <li>Telefon: +385 1 234 5678</li>
-                <li>Adresa: Ulica blockchain tehnologije 42, 10000 Zagreb</li>
+                <li>Email: info@blok3.eu</li>
+                <li>Telefon: +385 98 229 311</li>
+                <li>Adresa: Petrinja, Brezje 14</li>
               </ul>
             </section>
           </div>
