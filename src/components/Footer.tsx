@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, AlertTriangle } from "lucide-react";
+import { Mail, MapPin, AlertTriangle } from "lucide-react";
 import blok3Logo from "@/assets/blok3-logo-transparent.png";
 
 const Footer = () => {
@@ -43,15 +43,11 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary" />
-                info@blok3.academy
-              </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-4 h-4 text-primary" />
-                +385 1 234 5678
+                info@blok3.eu
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                Zagreb, Hrvatska
+                Petrinja, Hrvatska
               </li>
             </ul>
           </div>
@@ -81,6 +77,9 @@ const Footer = () => {
               <p>vl. Dean Valentine Rogulja</p>
               <p>Petrinja, Brezje 14</p>
               <p className="mt-2">
+                <span className="text-foreground">OIB:</span> 00000000
+              </p>
+              <p>
                 <span className="text-foreground">Matični broj obrta:</span> 98665634
               </p>
               <p>
@@ -106,7 +105,7 @@ const Footer = () => {
         {/* Legal Links & Copyright */}
         <div className="mt-6 md:mt-8 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs md:text-sm text-muted-foreground text-center md:text-left">
-            © {currentYear} Blok3 Akademija d.o.o. Sva prava pridržana.
+            © {currentYear} DIGITALNA EVOLUCIJA. Sva prava pridržana.
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground">
             <Link to="/uvjeti-poslovanja" className="hover:text-primary transition-colors">
