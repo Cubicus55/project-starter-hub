@@ -76,30 +76,25 @@ const Footer = () => {
         <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-border">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="text-xs md:text-sm text-muted-foreground">
-              <p className="font-semibold text-foreground mb-2">Blok3 Akademija d.o.o.</p>
-              <p>Ulica blockchain tehnologije 42, 10000 Zagreb, Hrvatska</p>
+              <p className="font-semibold text-foreground mb-2">Podaci o obrtu</p>
+              <p>DIGITALNA EVOLUCIJA, obrt za savjetovanje i edukaciju</p>
+              <p>vl. Dean Valentine Rogulja</p>
+              <p>Petrinja, Brezje 14</p>
               <p className="mt-2">
-                <span className="text-foreground">MBS:</span> 081234567 | 
-                <span className="text-foreground ml-1 md:ml-2">OIB:</span> 12345678901
+                <span className="text-foreground">Matični broj obrta:</span> 98665634
               </p>
               <p>
-                <span className="text-foreground">Temeljni kapital:</span> 20.000,00 EUR (uplaćen u cijelosti)
-              </p>
-              <p>
-                <span className="text-foreground">Član uprave:</span> Ivan Horvat, direktor
-              </p>
-              <p>
-                <span className="text-foreground">Sud:</span> Trgovački sud u Zagrebu
+                <span className="text-foreground">Broj obrtnice:</span> 03010301574
               </p>
             </div>
             <div className="text-xs md:text-sm text-muted-foreground">
               <p className="font-semibold text-foreground mb-2">Informacije o plaćanju</p>
               <p>Sve cijene su izražene u EUR i uključuju PDV.</p>
               <p className="mt-2">
-                <span className="text-foreground">Načini plaćanja:</span> Transakcijski račun, kartice (Visa, Mastercard)
+                <span className="text-foreground">IBAN:</span> HR5924070001100672541
               </p>
               <p>
-                <span className="text-foreground">IBAN:</span> HR1234567890123456789
+                <span className="text-foreground">Poslovna banka:</span> OTP Banka d.d.
               </p>
               <p className="mt-2 text-xs">
                 Za svaku uplatu izdaje se fiskalizirani račun u skladu sa Zakonom o fiskalizaciji.
