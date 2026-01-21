@@ -11,9 +11,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="sm:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="mb-4">
               <img src={blok3Logo} alt="Blok3 Logo" className="h-12 w-auto" />
-              <span className="font-bold text-xl text-foreground">Blok3 Akademija</span>
             </div>
             <p className="text-muted-foreground max-w-md mb-6 text-sm md:text-base">
               Vodeći program za blockchain i Web3 edukaciju u regiji. Pripremamo te za budućnost digitalne ekonomije.
