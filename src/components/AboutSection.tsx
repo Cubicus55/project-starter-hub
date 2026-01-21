@@ -29,7 +29,7 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-10 md:mb-14">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">O programu</span>
+            <span className="text-gradient font-semibold text-sm uppercase tracking-wider">O programu</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-4 mb-6">
               Kompletna <span className="text-gradient">kripto edukacija</span>
             </h2>

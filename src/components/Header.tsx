@@ -34,7 +34,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-lg">
+            <Button asChild className="font-semibold px-6">
               <a href="#apply">Prijavi se</a>
             </Button>
           </div>
@@ -62,7 +62,7 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-2">
+              <Button asChild className="font-semibold mt-2">
                 <a href="#apply" onClick={() => setIsMenuOpen(false)}>Prijavi se</a>
               </Button>
             </div>

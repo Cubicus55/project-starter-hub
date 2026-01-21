@@ -223,7 +223,7 @@ const CurriculumSection = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Kurikulum</span>
+          <span className="text-gradient font-semibold text-sm uppercase tracking-wider">Kurikulum</span>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-4 mb-4 md:mb-6">
             3 razine za <span className="text-gradient">buduće eksperte</span>
           </h2>
