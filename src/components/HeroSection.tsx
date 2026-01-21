@@ -1,49 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { Terminal } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Play } from "lucide-react";
 
-const TerminalCard = () => {
-  const [visibleLines, setVisibleLines] = useState(0);
-  
-  const lines = [
-    { text: "Učitavam znanje o Bitcoinu...", typing: true },
-    { text: "Otkrivam tajne blockchaina...", typing: true },
-    { text: "Aktiviram DeFi protokole...", typing: true },
-    { text: "Znanje učitano. Spreman za budućnost!", success: true },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleLines((prev) => {
-        if (prev < lines.length) return prev + 1;
-        return prev;
-      });
-    }, 800);
-    return () => clearInterval(interval);
-  }, []);
-
+const VideoCard = () => {
   return (
-    <div className="bg-[hsl(200_80%_12%)] rounded-2xl p-6 md:p-8 border border-primary/20 shadow-2xl">
-      <div className="flex items-center gap-2 mb-6">
-        <Terminal className="w-5 h-5 text-primary" />
-        <span className="text-primary font-mono text-sm font-semibold tracking-wide">BLOK3_SYSTEM_INIT</span>
+    <div className="relative bg-[hsl(200_80%_12%)] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl aspect-video">
+      {/* Video placeholder with play button */}
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-transparent">
+        <div className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30 cursor-pointer hover:bg-primary/30 transition-all duration-300 hover:scale-110">
+          <Play className="w-8 h-8 text-primary fill-primary" />
+        </div>
       </div>
-      <div className="space-y-3 font-mono text-sm">
-        {lines.slice(0, visibleLines).map((line, index) => (
-          <div 
-            key={index} 
-            className={`flex items-start gap-2 animate-fade-in ${line.success ? 'text-emerald-400' : 'text-muted-foreground'}`}
-          >
-            <span className="text-muted-foreground">&gt;</span>
-            <span>{line.text}</span>
-          </div>
-        ))}
-        {visibleLines < lines.length && (
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <span>&gt;</span>
-            <span className="animate-pulse">_</span>
-          </div>
-        )}
+      
+      {/* Decorative corner accents */}
+      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/40 rounded-tl-xl" />
+      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary/40 rounded-tr-xl" />
+      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary/40 rounded-bl-xl" />
+      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/40 rounded-br-xl" />
+      
+      {/* Bottom label */}
+      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+        <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Promotivni video</span>
+        <span className="text-xs text-primary/70 font-mono">00:00</span>
       </div>
     </div>
   );
@@ -115,7 +92,7 @@ const HeroSection = () => {
             className="opacity-0 animate-fade-up lg:justify-self-end w-full max-w-md lg:max-w-lg"
             style={{ animationDelay: '0.5s' }}
           >
-            <TerminalCard />
+            <VideoCard />
           </div>
         </div>
       </div>
