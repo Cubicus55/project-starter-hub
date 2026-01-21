@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, AlertTriangle } from "lucide-react";
-import blok3Logo from "@/assets/blok3-logo-transparent.png";
+import blok3Logo from "@/assets/blok3-logo-2-transparent.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
