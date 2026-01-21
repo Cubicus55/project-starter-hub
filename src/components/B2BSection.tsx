@@ -35,7 +35,7 @@ const B2BSection = () => {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <Button 
                   size="lg"
-                  className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                  className="w-full md:w-auto font-semibold"
                   asChild
                 >
                   <a href="mailto:info@blok3.hr">

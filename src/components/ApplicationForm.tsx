@@ -79,7 +79,7 @@ const ApplicationForm = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Prijava</span>
+          <span className="text-gradient font-semibold text-sm uppercase tracking-wider">Prijava</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
             Obrazuj se za <span className="text-gradient">digitalnu budućnost</span>
           </h2>
@@ -246,7 +246,7 @@ const ApplicationForm = () => {
                     type="submit" 
                     size="lg"
                     disabled={isSubmitting || !termsAccepted}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg"
+                    className="w-full font-semibold py-6 text-lg"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">

@@ -53,7 +53,7 @@ const HeroSection = () => {
               style={{ animationDelay: '0.2s' }}
             >
               <span className="text-foreground">Edukacija za</span>
-              <span className="text-primary"> digitalnu ekonomiju</span>
+              <span className="text-gradient"> digitalnu ekonomiju</span>
             </h1>
 
             {/* Subheading */}
@@ -72,7 +72,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 asChild
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-base rounded-xl"
+                className="font-semibold px-8 py-6 text-base"
               >
                 <a href="#curriculum">Istraži kurikulum</a>
               </Button>
@@ -80,7 +80,7 @@ const HeroSection = () => {
                 size="lg" 
                 variant="outline"
                 asChild
-                className="border-border bg-muted/50 hover:bg-muted font-semibold px-8 py-6 text-base rounded-xl"
+                className="border-border bg-muted/50 hover:bg-muted font-semibold px-8 py-6 text-base"
               >
                 <a href="#about">Saznaj više</a>
               </Button>
