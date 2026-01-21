@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import blok3Logo from "@/assets/blok3-logo-transparent.png";
+import blok3Logo from "@/assets/blok3-logo-2.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,9 +16,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center">
             <img src={blok3Logo} alt="Blok3 Logo" className="h-10 w-auto" />
-            <span className="font-bold text-xl text-foreground">BLOK3</span>
           </a>
 
           {/* Desktop Navigation */}
