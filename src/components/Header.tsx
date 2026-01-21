@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import blok3Logo from "@/assets/blok3-logo-2-transparent.png";
+import blok3Logo from "@/assets/blok3-logo.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
