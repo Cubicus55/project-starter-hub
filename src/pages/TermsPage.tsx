@@ -32,7 +32,7 @@ const TermsPage = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">2. Opis usluga</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Blok3 Akademija pruža online edukativne programe iz područja blockchain tehnologije, kriptovaluta i 
+                Blok3 pruža online edukativne programe iz područja blockchain tehnologije, kriptovaluta i 
                 decentraliziranih financija (DeFi). Naši programi uključuju video materijale, pisane resurse, 
                 interaktivne kvizove i pristup zajednici.
               </p>
@@ -65,7 +65,7 @@ const TermsPage = () => {
               <h2 className="text-2xl font-semibold text-foreground mb-4">5. Intelektualno vlasništvo</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Sav sadržaj dostupan kroz naše edukativne programe, uključujući video materijale, tekstove, 
-                grafike i druge resurse, zaštićen je autorskim pravima i ostaje u vlasništvu Blok3 Akademija d.o.o. 
+                grafike i druge resurse, zaštićen je autorskim pravima i ostaje u vlasništvu DIGITALNA EVOLUCIJA obrta. 
                 Neovlašteno kopiranje, distribucija ili dijeljenje materijala strogo je zabranjeno.
               </p>
             </section>
@@ -75,7 +75,7 @@ const TermsPage = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Sadržaj naših edukativnih programa isključivo je informativne i edukativne prirode. Ne pružamo 
                 financijske, investicijske niti pravne savjete. Investiranje u kriptovalute i blockchain projekte 
-                nosi značajan rizik gubitka kapitala. Blok3 Akademija ne snosi odgovornost za financijske gubitke 
+                nosi značajan rizik gubitka kapitala. Blok3 ne snosi odgovornost za financijske gubitke 
                 nastale primjenom stečenog znanja.
               </p>
             </section>

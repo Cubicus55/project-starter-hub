@@ -34,7 +34,7 @@ const AboutSection = () => {
               Kompletna <span className="text-gradient">kripto edukacija</span>
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-              Blok3 Akademija je sveobuhvatni edukacijski program koji te vodi od potpunog početnika do 
+              Blok3 je sveobuhvatni edukacijski program koji te vodi od potpunog početnika do 
               samostalnog i sigurnog korisnika blockchain tehnologije. Kroz 3 razine naučit ćeš sve – 
               od osnova Bitcoina i sigurnog čuvanja imovine, preko DeFi protokola i tehničke analize, 
               do naprednih strategija ulaganja i prepoznavanja prijevara.

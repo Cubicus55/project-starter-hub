@@ -59,7 +59,7 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">Odricanje od odgovornosti (NFA)</h4>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                Sadržaj Blok3 Akademije je isključivo edukativne prirode i ne predstavlja financijski, investicijski ili pravni savjet. 
+                Sadržaj Blok3 edukacije je isključivo edukativne prirode i ne predstavlja financijski, investicijski ili pravni savjet. 
                 Nismo registrirani financijski savjetnici. Investiranje u kriptovalute nosi značajan rizik gubitka kapitala. 
                 Savjetujte se s licenciranim financijskim savjetnikom prije donošenja investicijskih odluka.
               </p>
