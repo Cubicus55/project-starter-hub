@@ -29,8 +29,17 @@ const VideoCard = () => {
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/images/pozadina.jpg')`,
+          backgroundPosition: 'center 40%',
+        }}
+      />
+      
+      {/* Dark overlay to soften the background */}
+      <div className="absolute inset-0 bg-background/70" />
       
       {/* Subtle grid pattern */}
       <div 
