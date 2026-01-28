@@ -9,17 +9,32 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <CurriculumSection />
-        <InstructorsSection />
-        <B2BSection />
-        <ApplicationForm />
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-background relative">
+      {/* Global Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/images/pozadina.jpg')`,
+          backgroundPosition: 'center 40%',
+        }}
+      />
+      
+      {/* Dark overlay to soften the background */}
+      <div className="fixed inset-0 bg-background/80" />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <CurriculumSection />
+          <InstructorsSection />
+          <B2BSection />
+          <ApplicationForm />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
