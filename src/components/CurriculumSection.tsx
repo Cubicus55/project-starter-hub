@@ -216,8 +216,8 @@ const CurriculumSection = () => {
 
   return (
     <section id="curriculum" className="relative py-16 md:py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Semi-transparent overlay for section separation */}
+      <div className="absolute inset-0 bg-background/30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       
       <div className="container relative z-10 px-4">

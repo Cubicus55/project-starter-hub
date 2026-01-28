@@ -51,7 +51,7 @@ const ApplicationForm = () => {
   if (isSubmitted) {
     return (
       <section id="apply" className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-background/30" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         
         <div className="container relative z-10 px-4">
@@ -71,8 +71,8 @@ const ApplicationForm = () => {
 
   return (
     <section id="apply" className="relative py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Semi-transparent overlay for section separation */}
+      <div className="absolute inset-0 bg-background/30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
