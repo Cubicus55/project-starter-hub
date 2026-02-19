@@ -13,7 +13,7 @@ const PrivacyPage = () => {
       <main className="container px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-foreground">Politika privatnosti</h1>
-          <p className="text-muted-foreground mb-6">Posljednje ažuriranje: 25. prosinca 2024.</p>
+          <p className="text-muted-foreground mb-6">Posljednje ažuriranje: 19. veljače 2026.</p>
 
           <div className="prose prose-invert max-w-none space-y-8">
             <section>
@@ -132,7 +132,6 @@ const PrivacyPage = () => {
               </p>
               <ul className="text-muted-foreground mt-2 space-y-1">
                 <li>Email: info@blok3.eu</li>
-                <li>Telefon: +385 98 229 311</li>
                 <li>Adresa: Petrinja, Brezje 14</li>
               </ul>
             </section>
