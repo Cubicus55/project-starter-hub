@@ -20,8 +20,6 @@ const Footer = () => {
             <div className="flex flex-wrap gap-4 md:gap-6 text-sm text-muted-foreground">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
               <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter</a>
-              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Discord</a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">YouTube</a>
             </div>
           </div>
 
