@@ -45,7 +45,6 @@ const ApplicationForm = () => {
   const benefits = [
     "Lifetime pristup materijalima",
     "Pristup alumni mreži",
-    "Potvrda o uspješnom završetku programa u vidu Soulbound Token (SBT) na blockchainu",
   ];
 
   if (isSubmitted) {
