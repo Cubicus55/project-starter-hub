@@ -108,13 +108,34 @@ const ApplicationForm = () => {
                 </ul>
 
                 <div className="mt-8 pt-6 border-t border-border">
-                  <div className="text-sm text-muted-foreground mb-2">Cijena programa</div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-bold text-foreground">€150</span>
-                    <span className="text-muted-foreground">po razini</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-2">Cijene uključuju PDV</p>
+                  <div className="text-sm font-medium text-foreground mb-3">Standardne cijene</div>
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex justify-between"><span>Razina 1</span><span className="font-semibold text-foreground">129 €</span></li>
+                    <li className="flex justify-between"><span>Razina 2</span><span className="font-semibold text-foreground">139 €</span></li>
+                    <li className="flex justify-between"><span>Razina 3</span><span className="font-semibold text-foreground">149 €</span></li>
+                    <li className="flex justify-between pt-1.5 border-t border-border"><span className="font-medium text-foreground">Paket (1 + 2 + 3)</span><span className="font-bold text-foreground">349 €</span></li>
+                  </ul>
                 </div>
+
+                <div className="mt-5 p-4 rounded-xl bg-primary/10 border border-primary/20">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg">🎉</span>
+                    <div>
+                      <div className="text-sm font-semibold text-primary">Early Bird ponuda</div>
+                      <div className="text-xs text-muted-foreground">Vrijedi do 1. 4.</div>
+                    </div>
+                  </div>
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex justify-between"><span>Razina 1</span><span className="font-semibold text-primary">99 €</span></li>
+                    <li className="flex justify-between"><span>Razina 2</span><span className="font-semibold text-primary">109 €</span></li>
+                    <li className="flex justify-between"><span>Razina 3</span><span className="font-semibold text-primary">119 €</span></li>
+                    <li className="flex justify-between pt-1.5 border-t border-primary/20"><span className="font-medium text-foreground">Paket (1 + 2 + 3)</span><span className="font-bold text-primary text-base">279 €</span></li>
+                  </ul>
+                </div>
+
+                <p className="text-xs text-muted-foreground mt-4">
+                  Sve cijene su izražene u eurima. PDV nije obračunat sukladno članku 90. Zakona o porezu na dodanu vrijednost.
+                </p>
 
                 {/* NFA Mini Disclaimer */}
                 <div className="mt-6 p-3 rounded-lg bg-destructive/10 border border-destructive/20">
