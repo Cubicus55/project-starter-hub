@@ -13,7 +13,7 @@ const CookiePage = () => {
       <main className="container px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-foreground">Politika kolačića</h1>
-          <p className="text-muted-foreground mb-6">Posljednje ažuriranje: 25. prosinca 2024.</p>
+          <p className="text-muted-foreground mb-6">Posljednje ažuriranje: 19. veljače 2026.</p>
 
           <div className="prose prose-invert max-w-none space-y-8">
             <section>
@@ -115,8 +115,7 @@ const CookiePage = () => {
                 Za sva pitanja vezana uz kolačiće, obratite nam se na:
               </p>
               <ul className="text-muted-foreground mt-2 space-y-1">
-                <li>Email: privacy@blok3.academy</li>
-                <li>Telefon: +385 1 234 5678</li>
+                <li>Email: info@blok3.eu</li>
               </ul>
             </section>
           </div>
