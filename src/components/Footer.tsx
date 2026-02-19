@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                Petrinja, Hrvatska
+                Zagreb, Hrvatska
               </li>
             </ul>
           </div>
