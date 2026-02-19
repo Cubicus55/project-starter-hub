@@ -132,7 +132,6 @@ const PrivacyPage = () => {
               </p>
               <ul className="text-muted-foreground mt-2 space-y-1">
                 <li>Email: info@blok3.eu</li>
-                <li>Adresa: Petrinja, Brezje 14</li>
               </ul>
             </section>
           </div>
