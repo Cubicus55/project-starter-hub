@@ -45,6 +45,7 @@ const ApplicationForm = () => {
   const benefits = [
     "Lifetime pristup materijalima",
     "Pristup alumni mreži",
+    "Mjesečni live Q&A s predavačima",
   ];
 
   if (isSubmitted) {
