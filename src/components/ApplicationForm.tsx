@@ -108,6 +108,7 @@ const ApplicationForm = () => {
                 </ul>
 
                 <div className="mt-8 pt-6 border-t border-border">
+                  <h4 className="text-base font-bold text-foreground mb-4">Cjenik</h4>
                   <div className="text-sm font-medium text-foreground mb-3">Standardne cijene</div>
                   <ul className="space-y-1.5 text-sm text-muted-foreground">
                     <li className="flex justify-between"><span>Razina 1</span><span className="font-semibold text-foreground">129 €</span></li>
@@ -118,12 +119,9 @@ const ApplicationForm = () => {
                 </div>
 
                 <div className="mt-5 p-4 rounded-xl bg-primary/10 border border-primary/20">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-lg">🎉</span>
-                    <div>
-                      <div className="text-sm font-semibold text-primary">Early Bird ponuda</div>
-                      <div className="text-xs text-muted-foreground">Vrijedi do 1. 4.</div>
-                    </div>
+                  <div className="mb-3">
+                    <div className="text-sm font-semibold text-primary">Early Bird ponuda</div>
+                    <div className="text-xs text-muted-foreground">Vrijedi do 01.04.2026.</div>
                   </div>
                   <ul className="space-y-1.5 text-sm text-muted-foreground">
                     <li className="flex justify-between"><span>Razina 1</span><span className="font-semibold text-primary">99 €</span></li>
