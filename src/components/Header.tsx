@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import blok3Logo from "@/assets/blok3-logo.svg";
 
@@ -33,16 +33,7 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
-            <Button
-              variant="outline"
-              size="sm"
-              className="font-semibold"
-              onClick={() => window.print()}
-            >
-              <Download className="w-4 h-4 mr-1" />
-              PDF
-            </Button>
+          <div className="hidden md:block">
             <Button asChild className="font-semibold px-6">
               <a href="#apply">Prijavi se</a>
             </Button>
