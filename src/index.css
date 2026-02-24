@@ -126,3 +126,25 @@
     box-shadow: var(--shadow-glow);
   }
 }
+
+@media print {
+  header, .cookie-banner, button, footer {
+    display: none !important;
+  }
+  .fixed {
+    position: static !important;
+  }
+  body, .min-h-screen {
+    background: white !important;
+    color: black !important;
+  }
+  * {
+    color: black !important;
+    background: transparent !important;
+    border-color: #ccc !important;
+  }
+  .text-gradient {
+    background: none !important;
+    -webkit-text-fill-color: #333aed !important;
+  }
+}
