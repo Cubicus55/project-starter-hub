@@ -26,9 +26,7 @@ const B2BSection = () => {
                   Za tvrtke i organizacije
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                  Osim individualnih tečajeva, nudimo prilagođene radionice i predavanja uživo 
-                  za tvrtke, organizacije i timove. Edukaciju kreiramo prema vašim specifičnim 
-                  potrebama – od osnova blockchaina za zaposlenike do naprednih tema za tehničke timove.
+                  Osim individualnih tečajeva, nudimo prilagođene radionice i predavanja uživo za tvrtke i organizacije. Edukaciju oblikujemo prema vašim specifičnim potrebama – od temeljnih koncepata blockchain tehnologije za zaposlenike do naprednih tema za voditelje, donositelje odluka i strateški razvoj.
                 </p>
               </div>
               
