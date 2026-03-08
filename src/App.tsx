@@ -24,6 +24,7 @@ const App = () => (
           <Route path="/uvjeti-poslovanja" element={<TermsPage />} />
           <Route path="/politika-privatnosti" element={<PrivacyPage />} />
           <Route path="/politika-kolacica" element={<CookiePage />} />
+          <Route path="/pitch-deck" element={<PitchDeck />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
