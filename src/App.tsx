@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import CookiePage from "./pages/CookiePage";
+import PitchDeck from "./pages/PitchDeck";
 import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
