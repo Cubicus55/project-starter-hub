@@ -77,7 +77,7 @@ const PitchDeck = () => {
               className="text-xs font-bold uppercase tracking-[0.25em]"
               style={{ color: BLUE }}
             >
-              Partnership Deck · 2025
+              Partnership Deck · 2026
             </span>
           </div>
 
