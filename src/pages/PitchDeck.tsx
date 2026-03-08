@@ -225,7 +225,7 @@ const PitchDeck = () => {
       {/* ───────── SLIDE 4 – CURRICULUM OVERVIEW ───────── */}
       <section className="pitch-page flex flex-col justify-between bg-white">
         <div className="px-16 py-14 flex flex-col gap-8 flex-1">
-          <PageHeader index="03" title="Curriculum Overview" accent="#6ee7b7" dark />
+          <PageHeader index="03" title="Curriculum Overview" accent="#6ee7b7" />
 
           <div className="flex flex-col gap-5 flex-1">
             {curriculum.map(lvl => (
