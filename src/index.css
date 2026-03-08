@@ -147,4 +147,25 @@
     background: none !important;
     -webkit-text-fill-color: #333aed !important;
   }
+
+  /* Pitch deck print styles */
+  .pitch-deck-root {
+    display: block !important;
+  }
+  .pitch-deck-root * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color: inherit !important;
+    background: inherit !important;
+    border-color: inherit !important;
+  }
+  .pitch-page {
+    page-break-after: always !important;
+    break-after: page !important;
+    min-height: 100vh !important;
+    position: relative !important;
+  }
+  .no-print {
+    display: none !important;
+  }
 }

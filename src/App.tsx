@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import CookiePage from "./pages/CookiePage";
+import PitchDeck from "./pages/PitchDeck";
 import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/uvjeti-poslovanja" element={<TermsPage />} />
           <Route path="/politika-privatnosti" element={<PrivacyPage />} />
           <Route path="/politika-kolacica" element={<CookiePage />} />
+          <Route path="/pitch-deck" element={<PitchDeck />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
