@@ -128,42 +128,38 @@
 }
 
 @media print {
-  header, .cookie-banner, button, footer {
+  /* Default (non-pitch-deck) print styles */
+  body:not(:has(.pitch-deck-root)) header,
+  body:not(:has(.pitch-deck-root)) .cookie-banner,
+  body:not(:has(.pitch-deck-root)) button,
+  body:not(:has(.pitch-deck-root)) footer {
     display: none !important;
   }
-  .fixed {
+  body:not(:has(.pitch-deck-root)) .fixed {
     position: static !important;
   }
-  body, .min-h-screen {
-    background: white !important;
-    color: black !important;
-  }
-  * {
+  body:not(:has(.pitch-deck-root)) * {
     color: black !important;
     background: transparent !important;
     border-color: #ccc !important;
   }
-  .text-gradient {
+  body:not(:has(.pitch-deck-root)) .text-gradient {
     background: none !important;
     -webkit-text-fill-color: #333aed !important;
   }
 
   /* Pitch deck print styles */
+  body:has(.pitch-deck-root) {
+    background: #0c1324 !important;
+  }
   .pitch-deck-root {
     display: block !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
   .pitch-deck-root * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    color: inherit !important;
-    background: inherit !important;
-    border-color: inherit !important;
-  }
-  .pitch-page {
-    page-break-after: always !important;
-    break-after: page !important;
-    min-height: 100vh !important;
-    position: relative !important;
   }
   .no-print {
     display: none !important;
