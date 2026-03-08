@@ -415,6 +415,16 @@ const PageHeader = ({
   title,
   accent,
   onDark = false,
+}: {
+  index: string;
+  title: string;
+  accent: string;
+  onDark?: boolean;
+})
+  index,
+  title,
+  accent,
+  onDark = false,
   dark = false,
 }: {
   index: string;
