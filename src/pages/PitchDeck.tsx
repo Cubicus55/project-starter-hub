@@ -420,18 +420,6 @@ const PageHeader = ({
   title: string;
   accent: string;
   onDark?: boolean;
-})
-  index,
-  title,
-  accent,
-  onDark = false,
-  dark = false,
-}: {
-  index: string;
-  title: string;
-  accent: string;
-  onDark?: boolean;
-  dark?: boolean;
 }) => (
   <div className="flex items-center gap-4">
     <span className="text-xs font-bold tracking-[0.2em] opacity-40"
