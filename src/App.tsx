@@ -27,6 +27,8 @@ const App = () => (
           <Route path="/politika-privatnosti" element={<PrivacyPage />} />
           <Route path="/politika-kolacica" element={<CookiePage />} />
           <Route path="/pitch-deck" element={<PitchDeck />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/hvala" element={<ThankYouPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
