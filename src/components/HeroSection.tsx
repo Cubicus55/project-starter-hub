@@ -58,7 +58,7 @@ const HeroSection = () => {
               className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed opacity-0 animate-fade-up"
               style={{ animationDelay: '0.3s' }}
             >
-              Sveobuhvatni edukativni program dizajniran za <strong className="text-foreground">pojedince i tvrtke</strong> koji žele savladati blockchain tehnologiju, MiCA regulativu i strateško upravljanje kripto imovinom.
+              19 video modula, 3 razine, kvizovi, doživotan pristup i mjesečni live call.
             </p>
 
             {/* CTA Buttons */}
