@@ -63,7 +63,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="font-semibold mt-2">
-                <a href="#apply" onClick={() => setIsMenuOpen(false)}>Prijavi se</a>
+                <a href="#pricing" onClick={() => setIsMenuOpen(false)}>Odaberi razinu</a>
               </Button>
             </div>
           </nav>
