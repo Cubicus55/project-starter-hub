@@ -6,13 +6,11 @@ import PricingSection from "@/components/PricingSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
-import ApplicationForm from "@/components/ApplicationForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Global Background Image */}
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -20,11 +18,7 @@ const Index = () => {
           backgroundPosition: 'center 40%',
         }}
       />
-      
-      {/* Dark overlay to soften the background */}
       <div className="fixed inset-0 bg-background/80" />
-      
-      {/* Content */}
       <div className="relative z-10">
         <Header />
         <main>
@@ -35,7 +29,6 @@ const Index = () => {
           <HowItWorksSection />
           <FAQSection />
           <FinalCTASection />
-          <ApplicationForm />
         </main>
         <Footer />
       </div>

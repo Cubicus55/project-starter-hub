@@ -2,17 +2,17 @@ const steps = [
   {
     number: "01",
     title: "Odaberi razinu",
-    description: "Izaberi program koji odgovara tvom iskustvu — od početnika do naprednog.",
+    description: "Pregledaj sadržaj i odaberi razinu koja odgovara tvom znanju — ili uzmi sve tri.",
   },
   {
     number: "02",
-    title: "Uči vlastitim tempom",
-    description: "Pristupaj materijalima kad god želiš. Strukturirani moduli vode te korak po korak.",
+    title: "Dovrši kupnju",
+    description: "Jednostavan i siguran proces plaćanja. Bez pretplate, bez skrivenih troškova.",
   },
   {
     number: "03",
-    title: "Primijeni znanje",
-    description: "Koristi naučeno u praksi uz podršku mentora i zajednice polaznika.",
+    title: "Dobij pristup i kreni učiti",
+    description: "Odmah nakon kupnje dobivaš pristup svim materijalima. Uči kad i koliko želiš.",
   },
 ];
 
