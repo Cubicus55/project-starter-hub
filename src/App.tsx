@@ -9,6 +9,8 @@ import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import CookiePage from "./pages/CookiePage";
 import PitchDeck from "./pages/PitchDeck";
+import CheckoutPage from "./pages/CheckoutPage";
+import ThankYouPage from "./pages/ThankYouPage";
 import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
