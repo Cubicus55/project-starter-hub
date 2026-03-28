@@ -12,7 +12,7 @@ const steps = [
   {
     number: "03",
     title: "Dobij pristup i kreni učiti",
-    description: "Odmah nakon kupnje dobivaš pristup svim materijalima. Uči kad i koliko želiš.",
+    description: "Nakon kupnje dobivaš pristup svim materijalima i možeš odmah krenuti učiti.",
   },
 ];
 

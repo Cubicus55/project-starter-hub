@@ -7,13 +7,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#about", label: "O PROGRAMU" },
-    { href: "#curriculum", label: "KURIKULUM" },
-    { href: "#instructors", label: "PREDAVAČI" },
+    { href: "#benefits", label: "O PROGRAMU" },
+    { href: "#pricing", label: "KURIKULUM" },
+    { href: "#audience", label: "PREDAVAČI" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg" style={{ scrollBehavior: 'smooth' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" className="flex items-center">
@@ -35,7 +35,7 @@ const Header = () => {
 
           <div className="hidden md:block">
             <Button asChild className="font-semibold px-6">
-              <a href="#apply">Prijavi se</a>
+              <a href="#pricing">Odaberi razinu</a>
             </Button>
           </div>
 
@@ -63,7 +63,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="font-semibold mt-2">
-                <a href="#apply" onClick={() => setIsMenuOpen(false)}>Prijavi se</a>
+                <a href="#pricing" onClick={() => setIsMenuOpen(false)}>Odaberi razinu</a>
               </Button>
             </div>
           </nav>

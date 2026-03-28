@@ -75,7 +75,7 @@ const plans = [
 ];
 
 const PricingSection = () => (
-  <section id="pricing" className="relative py-20 md:py-28">
+  <section id="pricing" className="relative py-20 md:py-28 scroll-mt-20">
     <div className="absolute inset-0 bg-background/30" />
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
     <div className="container relative z-10 px-4">
@@ -84,6 +84,7 @@ const PricingSection = () => (
         <h2 className="text-3xl md:text-5xl font-bold mt-4">
           Odaberi svoju <span className="text-gradient">razinu</span>
         </h2>
+        <p className="text-muted-foreground mt-4 text-base">Odaberi razinu koja odgovara tvojem znanju</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
@@ -109,6 +110,9 @@ const PricingSection = () => (
 
             <div className="mb-6">
               <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
+              {plan.recommended && (
+                <p className="text-primary text-sm font-semibold mt-1">Najbolja vrijednost</p>
+              )}
             </div>
 
             <ul className="space-y-2.5 mb-8 flex-1">

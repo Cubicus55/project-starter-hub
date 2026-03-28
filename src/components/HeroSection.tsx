@@ -49,8 +49,8 @@ const HeroSection = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-8 opacity-0 animate-fade-up tracking-tight"
               style={{ animationDelay: '0.2s' }}
             >
-              <span className="text-foreground">Edukacija za</span>
-              <span className="text-gradient"> digitalnu ekonomiju</span>
+             <span className="text-foreground">Strukturirana kripto</span>
+              <span className="text-gradient"> edukacija na hrvatskom</span>
             </h1>
 
             {/* Subheading */}
@@ -58,7 +58,7 @@ const HeroSection = () => {
               className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed opacity-0 animate-fade-up"
               style={{ animationDelay: '0.3s' }}
             >
-              Sveobuhvatni edukativni program dizajniran za <strong className="text-foreground">pojedince i tvrtke</strong> koji žele savladati blockchain tehnologiju, MiCA regulativu i strateško upravljanje kripto imovinom.
+              19 video modula, 3 razine, kvizovi, doživotan pristup i mjesečni live call.
             </p>
 
             {/* CTA Buttons */}
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 asChild
                 className="font-semibold px-8 py-6 text-base"
               >
-                <a href="#curriculum">Istraži kurikulum</a>
+                <a href="#pricing">Odaberi svoju razinu</a>
               </Button>
               <Button 
                 size="lg" 
@@ -79,7 +79,7 @@ const HeroSection = () => {
                 asChild
                 className="border-border bg-muted/50 hover:bg-muted font-semibold px-8 py-6 text-base"
               >
-                <a href="#about">Saznaj više</a>
+                <a href="#benefits">Pogledaj program</a>
               </Button>
             </div>
           </div>
