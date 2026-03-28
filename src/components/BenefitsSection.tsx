@@ -4,7 +4,7 @@ const benefits = [
   {
     icon: GraduationCap,
     title: "Strukturirana edukacija",
-    description: "Jedini program u regiji koji te vodi korak po korak — od osnova do naprednih strategija.",
+    description: "Strukturiran program koji te vodi korak po korak — od osnova do naprednijeg razumijevanja kripta.",
   },
   {
     icon: Shield,
