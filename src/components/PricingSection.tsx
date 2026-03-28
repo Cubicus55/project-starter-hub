@@ -84,6 +84,7 @@ const PricingSection = () => (
         <h2 className="text-3xl md:text-5xl font-bold mt-4">
           Odaberi svoju <span className="text-gradient">razinu</span>
         </h2>
+        <p className="text-muted-foreground mt-4 text-base">Odaberi razinu koja odgovara tvojem znanju</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
