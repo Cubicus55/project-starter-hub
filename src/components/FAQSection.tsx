@@ -8,27 +8,27 @@ import {
 const faqs = [
   {
     q: "Trebam li ikakvo predznanje?",
-    a: "Ne! Razina 1 je dizajnirana za potpune početnike. Vodimo te od samih osnova blockchaina i Bitcoina.",
+    a: "Ne! Razina 1 je dizajnirana za potpune početnike. Vodimo te od samih osnova — što je blockchain, kako funkcionira Bitcoin i kako sigurno čuvati kriptovalute.",
+  },
+  {
+    q: "Što dobijem kupnjom?",
+    a: "Doživotan pristup svim video modulima odabrane razine, kvizove za provjeru znanja i mjesečne live pozive s predavačima.",
+  },
+  {
+    q: "Mogu li kupiti samo jednu razinu?",
+    a: "Da, svaka razina se može kupiti zasebno. Ako želiš sve, Bundle opcija nudi kompletan program po povoljnijoj cijeni.",
   },
   {
     q: "Koliko traje program?",
-    a: "Svaka razina je osmišljena da se završi u 4-6 tjedana, ali učiš vlastitim tempom — pristup materijalima je neograničen.",
+    a: "Svaka razina ima 5-7 video modula koje možeš proći u 2-4 tjedna, ali nema vremenskog ograničenja — uči vlastitim tempom.",
   },
   {
     q: "Što ako mi ne odgovara?",
-    a: "Nudimo potpuni povrat novca unutar 14 dana od kupnje, bez pitanja.",
+    a: "Nudimo potpuni povrat novca unutar 14 dana od kupnje, bez dodatnih pitanja.",
   },
   {
-    q: "Je li program dostupan na hrvatskom?",
-    a: "Da, sav sadržaj je u potpunosti na hrvatskom jeziku.",
-  },
-  {
-    q: "Kako izgleda Bundle ponuda?",
-    a: "Full Bundle uključuje sve tri razine po povlaštenoj cijeni s uštedom od €70, prioritetnu mentorsku podršku i certifikat o završetku.",
-  },
-  {
-    q: "Mogu li koristiti program za edukaciju svog tima?",
-    a: "Apsolutno! Imamo posebne B2B pakete za tvrtke. Kontaktirajte nas za prilagođenu ponudu.",
+    q: "Je li sadržaj na hrvatskom?",
+    a: "Da, sav sadržaj je u potpunosti na hrvatskom jeziku — moduli, kvizovi i live pozivi.",
   },
 ];
 

@@ -4,59 +4,73 @@ import { Check, Star } from "lucide-react";
 const plans = [
   {
     name: "Razina 1",
-    subtitle: "Osnove blockchaina",
-    price: "€99",
-    originalPrice: "€129",
+    subtitle: "Osnove kripta, sigurnosti i blockchain logike",
+    price: "129 €",
     features: [
-      "Bitcoin i blockchain osnove",
-      "Kreiranje i sigurnost walleta",
-      "Osnove kupovine i prodaje",
-      "Prepoznavanje prijevara",
-      "Pristup zajednici polaznika",
+      "Bitcoin, blockchain i vrste kriptovaluta",
+      "Sigurnost i self-custody",
+      "Zakonodavni i porezni okvir",
+      "Osnove tehničke analize",
+      "FIAT onramp i offramp",
+      "Praktična radionica: MetaMask",
+      "Doživotan pristup",
+      "Mjesečni live call",
     ],
     recommended: false,
+    href: "/checkout-razina-1",
+    cta: "Kupi Razinu 1",
   },
   {
     name: "Razina 2",
-    subtitle: "DeFi i napredni koncepti",
-    price: "€109",
-    originalPrice: "€139",
+    subtitle: "Dublje razumijevanje tržišta, tokena i kripto ekosustava",
+    price: "139 €",
     features: [
-      "Sve iz Razine 1",
-      "Ethereum i DeFi protokoli",
-      "NFT-ovi i Layer 2 rješenja",
-      "Tehnička analiza",
-      "Napredna sigurnost",
+      "Ethereum i Layer 2 rješenja",
+      "Rudarenje i halving ciklusi",
+      "Tokenomija",
+      "Tehnička analiza za investitore",
+      "Kategorije i trendovi",
+      "Kripto kultura i slang",
+      "Doživotan pristup",
+      "Mjesečni live call",
     ],
     recommended: false,
+    href: "/checkout-razina-2",
+    cta: "Kupi Razinu 2",
   },
   {
     name: "Razina 3",
-    subtitle: "Strategija i regulativa",
-    price: "€119",
-    originalPrice: "€149",
+    subtitle: "Napredne teme, DeFi, sigurnost i regulativa",
+    price: "149 €",
     features: [
-      "Sve iz Razine 1 i 2",
-      "MiCA regulativa",
-      "Investicijske strategije",
-      "Exit planovi i disciplina",
-      "Portfolio upravljanje",
+      "DeFi arhitektura",
+      "Bridging i međulančana komunikacija",
+      "AI i kripto",
+      "Napredna sigurnost i obrana od prijevara",
+      "Globalna regulativa i institucije",
+      "MiCA, SAD i regija",
+      "Kapital, plan i disciplina",
+      "Doživotan pristup",
+      "Mjesečni live call",
     ],
     recommended: false,
+    href: "/checkout-razina-3",
+    cta: "Kupi Razinu 3",
   },
   {
-    name: "Full Bundle",
-    subtitle: "Sve 3 razine",
-    price: "€279",
-    originalPrice: "€349",
+    name: "Sve 3 razine",
+    subtitle: "Kompletan Blok3 edukacijski program",
+    price: "349 €",
     features: [
-      "Kompletni kurikulum (3 razine)",
-      "Ušteda od €70",
-      "Pristup svim materijalima",
-      "Prioritetna mentorska podrška",
-      "Certifikat o završetku",
+      "Sve 3 razine",
+      "19 video modula",
+      "Kvizovi i provjera znanja",
+      "Doživotan pristup",
+      "Mjesečni live call",
     ],
     recommended: true,
+    href: "/checkout-sve-3-razine",
+    cta: "Kupi kompletan program",
   },
 ];
 
@@ -70,9 +84,6 @@ const PricingSection = () => (
         <h2 className="text-3xl md:text-5xl font-bold mt-4">
           Odaberi svoju <span className="text-gradient">razinu</span>
         </h2>
-        <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-          Early Bird cijene vrijede do 1. travnja 2026.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
@@ -91,20 +102,16 @@ const PricingSection = () => (
               </div>
             )}
 
-            <div className="mb-6">
+            <div className="mb-4">
               <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-              <p className="text-muted-foreground text-sm mt-1">{plan.subtitle}</p>
+              <p className="text-muted-foreground text-sm mt-1 leading-relaxed">{plan.subtitle}</p>
             </div>
 
             <div className="mb-6">
-              <div className="flex items-end gap-2">
-                <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
-                <span className="text-muted-foreground line-through text-sm mb-1">{plan.originalPrice}</span>
-              </div>
-              <span className="text-xs text-primary font-medium">Early Bird cijena</span>
+              <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
             </div>
 
-            <ul className="space-y-3 mb-8 flex-1">
+            <ul className="space-y-2.5 mb-8 flex-1">
               {plan.features.map((f, j) => (
                 <li key={j} className="flex items-start gap-2.5 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -121,7 +128,7 @@ const PricingSection = () => (
               }`}
               variant={plan.recommended ? "default" : "secondary"}
             >
-              <a href={`/checkout?product=${plan.recommended ? "bundle" : `razina-${i + 1}`}`}>Prijavi se</a>
+              <a href={plan.href}>{plan.cta}</a>
             </Button>
           </div>
         ))}
