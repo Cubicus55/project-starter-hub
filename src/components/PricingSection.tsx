@@ -110,6 +110,9 @@ const PricingSection = () => (
 
             <div className="mb-6">
               <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
+              {plan.recommended && (
+                <p className="text-primary text-sm font-semibold mt-1">Najbolja vrijednost</p>
+              )}
             </div>
 
             <ul className="space-y-2.5 mb-8 flex-1">

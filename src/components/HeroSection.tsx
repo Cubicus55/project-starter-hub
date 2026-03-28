@@ -71,7 +71,7 @@ const HeroSection = () => {
                 asChild
                 className="font-semibold px-8 py-6 text-base"
               >
-                <a href="#curriculum">Istraži kurikulum</a>
+                <a href="#pricing">Odaberi svoju razinu</a>
               </Button>
               <Button 
                 size="lg" 
@@ -79,7 +79,7 @@ const HeroSection = () => {
                 asChild
                 className="border-border bg-muted/50 hover:bg-muted font-semibold px-8 py-6 text-base"
               >
-                <a href="#about">Saznaj više</a>
+                <a href="#benefits">Pogledaj program</a>
               </Button>
             </div>
           </div>

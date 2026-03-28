@@ -24,7 +24,7 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <section className="relative py-20 md:py-28">
+  <section id="benefits" className="relative py-20 md:py-28 scroll-mt-20">
     <div className="absolute inset-0 bg-background/30" />
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
     <div className="container relative z-10 px-4">
