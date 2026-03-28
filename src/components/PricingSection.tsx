@@ -121,7 +121,7 @@ const PricingSection = () => (
               }`}
               variant={plan.recommended ? "default" : "secondary"}
             >
-              <a href="#application">Prijavi se</a>
+              <a href={`/checkout?product=${plan.recommended ? "bundle" : `razina-${i + 1}`}`}>Prijavi se</a>
             </Button>
           </div>
         ))}
