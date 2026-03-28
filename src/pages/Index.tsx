@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import CurriculumSection from "@/components/CurriculumSection";
-import InstructorsSection from "@/components/InstructorsSection";
-import B2BSection from "@/components/B2BSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import AudienceSection from "@/components/AudienceSection";
+import PricingSection from "@/components/PricingSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import FAQSection from "@/components/FAQSection";
+import FinalCTASection from "@/components/FinalCTASection";
 import ApplicationForm from "@/components/ApplicationForm";
 import Footer from "@/components/Footer";
 
@@ -27,10 +29,12 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
-          <AboutSection />
-          <CurriculumSection />
-          <InstructorsSection />
-          <B2BSection />
+          <BenefitsSection />
+          <AudienceSection />
+          <PricingSection />
+          <HowItWorksSection />
+          <FAQSection />
+          <FinalCTASection />
           <ApplicationForm />
         </main>
         <Footer />
