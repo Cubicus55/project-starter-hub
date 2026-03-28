@@ -49,8 +49,8 @@ const HeroSection = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-8 opacity-0 animate-fade-up tracking-tight"
               style={{ animationDelay: '0.2s' }}
             >
-              <span className="text-foreground">Edukacija za</span>
-              <span className="text-gradient"> digitalnu ekonomiju</span>
+             <span className="text-foreground">Strukturirana kripto</span>
+              <span className="text-gradient"> edukacija na hrvatskom</span>
             </h1>
 
             {/* Subheading */}
