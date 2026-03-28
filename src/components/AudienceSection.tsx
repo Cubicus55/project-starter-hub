@@ -9,7 +9,7 @@ const audiences = [
   {
     icon: Briefcase,
     title: "Iskusni investitori",
-    description: "Već trgujesh, ali želiš strukturirano znanje o DeFi-ju, regulativi i naprednim strategijama.",
+    description: "Već trguješ, ali želiš strukturirano znanje o DeFi-ju, regulativi i naprednim strategijama.",
   },
   {
     icon: Building2,
