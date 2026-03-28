@@ -35,7 +35,7 @@ const Header = () => {
 
           <div className="hidden md:block">
             <Button asChild className="font-semibold px-6">
-              <a href="#apply">Prijavi se</a>
+              <a href="#pricing">Odaberi razinu</a>
             </Button>
           </div>
 
