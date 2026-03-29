@@ -80,6 +80,7 @@ const InstructorsSection = () => {
                   href={instructor.socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => { e.preventDefault(); window.open(instructor.socials.linkedin, '_blank', 'noopener,noreferrer'); }}
                   className="w-9 h-9 rounded-full bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
                 >
                   <Linkedin className="w-4 h-4" />
@@ -88,6 +89,7 @@ const InstructorsSection = () => {
                   href={instructor.socials.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => { e.preventDefault(); window.open(instructor.socials.youtube, '_blank', 'noopener,noreferrer'); }}
                   className="w-9 h-9 rounded-full bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
                 >
                   <Youtube className="w-4 h-4" />
