@@ -9,14 +9,14 @@ const Header = () => {
   const navLinks = [
     { href: "#benefits", label: "O PROGRAMU" },
     { href: "#pricing", label: "KURIKULUM" },
-    { href: "#audience", label: "PREDAVAČI" },
+    { href: "#instructors", label: "PREDAVAČI" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg" style={{ scrollBehavior: 'smooth' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" className="flex items-center">
+          <a href="/project-starter-hub/" className="flex items-center">
             <img src={blok3Logo} alt="Blok3 Logo" className="h-10 w-auto" />
           </a>
 
