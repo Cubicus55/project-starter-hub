@@ -3,25 +3,14 @@ import { Play } from "lucide-react";
 
 const VideoCard = () => {
   return (
-    <div className="relative bg-[hsl(200_80%_12%)] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl aspect-video">
-      {/* Video placeholder with play button */}
-      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-transparent">
-        <div className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30 cursor-pointer hover:bg-primary/30 transition-all duration-300 hover:scale-110">
-          <Play className="w-8 h-8 text-primary fill-primary" />
-        </div>
-      </div>
-      
-      {/* Decorative corner accents */}
-      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/40 rounded-tl-xl" />
-      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary/40 rounded-tr-xl" />
-      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary/40 rounded-bl-xl" />
-      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/40 rounded-br-xl" />
-      
-      {/* Bottom label */}
-      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-        <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Promotivni video</span>
-        <span className="text-xs text-primary/70 font-mono">00:00</span>
-      </div>
+    <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl aspect-video bg-[hsl(200_80%_12%)]">
+      <iframe
+        src="https://www.youtube.com/embed/yJw8yCWYlSM?rel=0&modestbranding=1"
+        title="Blok3 promotivni video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="absolute inset-0 w-full h-full"
+      />
     </div>
   );
 };
