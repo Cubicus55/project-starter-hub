@@ -61,6 +61,8 @@ const plans = [
     name: "Sve 3 razine",
     subtitle: "Kompletan Blok3 edukacijski program",
     price: "349 €",
+    originalPrice: "417 €",
+    savings: "Uštedi 68 € uz kompletan program",
     features: [
       "Sve 3 razine",
       "19 video modula",
@@ -72,7 +74,7 @@ const plans = [
     href: "/checkout-sve-3-razine",
     cta: "Kupi kompletan program",
   },
-];
+] as const;
 
 const PricingSection = () => (
   <section id="pricing" className="relative py-20 md:py-28 scroll-mt-20">
