@@ -59,7 +59,7 @@ const HeroSection = () => {
                 asChild
                 className="font-semibold px-8 py-6 text-base"
               >
-                <a href="#pricing">Odaberi svoju razinu</a>
+                <a href="#pricing">Započni edukaciju</a>
               </Button>
               <Button 
                 size="lg" 

@@ -143,6 +143,20 @@ const PricingSection = () => (
         ))}
       </div>
 
+      {/* Trust row */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14 max-w-4xl mx-auto">
+        {[
+          { icon: Clock, text: "Doživotan pristup — uči u svom tempu" },
+          { icon: CreditCard, text: "Jednokratna uplata — bez pretplate" },
+          { icon: Video, text: "Mjesečni live call s edukatorima" },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
+            <item.icon className="w-5 h-5 text-primary shrink-0" />
+            {item.text}
+          </div>
+        ))}
+      </div>
+
       <p className="text-center text-xs text-muted-foreground mt-8">
         PDV se ne obračunava sukladno članku 90. Zakona o PDV-u.
       </p>

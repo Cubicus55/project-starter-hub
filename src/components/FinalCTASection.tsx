@@ -9,14 +9,19 @@ const FinalCTASection = () => (
     </div>
     <div className="container relative z-10 px-4 text-center">
       <h2 className="text-3xl md:text-5xl font-bold mb-6">
-        Spreman za <span className="text-gradient">sljedeći korak</span>?
+        Spreman za <span className="text-gradient">strukturiranu kripto edukaciju</span>?
       </h2>
       <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-        Pridruži se polaznicima koji su već započeli svoju blockchain edukaciju. Odaberi razinu i kreni učiti danas.
+        Pridruži se polaznicima koji su već započeli svoju blockchain edukaciju.
       </p>
-      <Button size="lg" asChild className="font-semibold px-10 py-7 text-lg">
-        <a href="#pricing">Pogledaj cijene</a>
-      </Button>
+      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <Button size="lg" asChild className="font-semibold px-10 py-7 text-lg">
+          <a href="/checkout-sve-3-razine">Kupi kompletan program — 349 €</a>
+        </Button>
+        <a href="#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">
+          ili odaberi pojedinačnu razinu
+        </a>
+      </div>
     </div>
   </section>
 );
