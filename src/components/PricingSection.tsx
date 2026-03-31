@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star } from "lucide-react";
+import { Check, Star, Clock, CreditCard, Video } from "lucide-react";
 
 const plans = [
   {
