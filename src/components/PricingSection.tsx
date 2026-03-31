@@ -112,8 +112,11 @@ const PricingSection = () => (
 
             <div className="mb-6">
               <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
-              {plan.recommended && (
-                <p className="text-primary text-sm font-semibold mt-1">Najbolja vrijednost</p>
+              {'originalPrice' in plan && plan.originalPrice && (
+                <span className="ml-2 text-lg text-muted-foreground line-through">{plan.originalPrice}</span>
+              )}
+              {'savings' in plan && plan.savings && (
+                <p className="text-primary text-sm font-semibold mt-1">{plan.savings}</p>
               )}
             </div>
 
