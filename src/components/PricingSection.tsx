@@ -101,7 +101,7 @@ const PricingSection = () => (
           >
             {plan.recommended && (
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-gradient-to-r from-[#333aed] to-[#8ee7b3] text-primary-foreground text-xs font-bold px-4 py-1.5 rounded-full">
-                <Star className="w-3.5 h-3.5 fill-current" /> PREPORUČENO
+                <Star className="w-3.5 h-3.5 fill-current" /> NAJBOLJA VRIJEDNOST
               </div>
             )}
 
