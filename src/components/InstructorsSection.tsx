@@ -76,24 +76,20 @@ const InstructorsSection = () => {
               </p>
 
               <div className="flex gap-3">
-                <a
-                  href={instructor.socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => { e.preventDefault(); window.open(instructor.socials.linkedin, '_blank', 'noopener,noreferrer'); }}
-                  className="w-9 h-9 rounded-full bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                <button
+                  type="button"
+                  onClick={() => window.open(instructor.socials.linkedin, "_blank", "noopener,noreferrer")}
+                  className="w-9 h-9 rounded-full bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-pointer"
                 >
                   <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href={instructor.socials.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => { e.preventDefault(); window.open(instructor.socials.youtube, '_blank', 'noopener,noreferrer'); }}
-                  className="w-9 h-9 rounded-full bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                </button>
+                <button
+                  type="button"
+                  onClick={() => window.open(instructor.socials.youtube, "_blank", "noopener,noreferrer")}
+                  className="w-9 h-9 rounded-full bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-pointer"
                 >
                   <Youtube className="w-4 h-4" />
-                </a>
+                </button>
               </div>
             </div>
           ))}
