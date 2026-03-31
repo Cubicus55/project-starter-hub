@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star } from "lucide-react";
+import { Check, Star, Clock, CreditCard, Video } from "lucide-react";
 
 const plans = [
   {
@@ -61,6 +61,8 @@ const plans = [
     name: "Sve 3 razine",
     subtitle: "Kompletan Blok3 edukacijski program",
     price: "349 €",
+    originalPrice: "417 €",
+    savings: "Uštedi 68 € uz kompletan program",
     features: [
       "Sve 3 razine",
       "19 video modula",
@@ -72,7 +74,7 @@ const plans = [
     href: "/checkout-sve-3-razine",
     cta: "Kupi kompletan program",
   },
-];
+] as const;
 
 const PricingSection = () => (
   <section id="pricing" className="relative py-20 md:py-28 scroll-mt-20">
@@ -110,8 +112,11 @@ const PricingSection = () => (
 
             <div className="mb-6">
               <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
-              {plan.recommended && (
-                <p className="text-primary text-sm font-semibold mt-1">Najbolja vrijednost</p>
+              {'originalPrice' in plan && plan.originalPrice && (
+                <span className="ml-2 text-lg text-muted-foreground line-through">{plan.originalPrice}</span>
+              )}
+              {'savings' in plan && plan.savings && (
+                <p className="text-primary text-sm font-semibold mt-1">{plan.savings}</p>
               )}
             </div>
 
@@ -134,6 +139,20 @@ const PricingSection = () => (
             >
               <a href={plan.href}>{plan.cta}</a>
             </Button>
+          </div>
+        ))}
+      </div>
+
+      {/* Trust row */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14 max-w-4xl mx-auto">
+        {[
+          { icon: Clock, text: "Doživotan pristup — uči u svom tempu" },
+          { icon: CreditCard, text: "Jednokratna uplata — bez pretplate" },
+          { icon: Video, text: "Mjesečni live call s edukatorima" },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
+            <item.icon className="w-5 h-5 text-primary shrink-0" />
+            {item.text}
           </div>
         ))}
       </div>
