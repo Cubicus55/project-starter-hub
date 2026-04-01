@@ -23,8 +23,8 @@ const faqs = [
     a: "Svaka razina ima 5-7 video modula koje možeš proći u 2-4 tjedna, ali nema vremenskog ograničenja — uči vlastitim tempom.",
   },
   {
-    q: "Što ako mi ne odgovara?",
-    a: "Nudimo potpuni povrat novca unutar 14 dana od kupnje, bez dodatnih pitanja.",
+    q: "Nudite li podršku 1 na 1?",
+    a: "Da — osim same edukacije, nudimo i individualne konzultacije 1 na 1 za one koji žele dodatnu podršku, jasnije razumjeti određene teme ili proći konkretna pitanja iz prakse. Ako te to zanima, javi nam se direktno i dogovorit ćemo najbolju opciju za tebe.",
   },
   {
     q: "Je li sadržaj na hrvatskom?",
