@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Koliko traje program?",
-    a: "Svaka razina ima 5-7 video modula koje možeš proći u 2-4 tjedna, ali nema vremenskog ograničenja — uči vlastitim tempom.",
+    a: "Svaka razina ima 6-7 video modula i nema vremenskog ograničenja — uči vlastitim tempom.",
   },
   {
     q: "Nudite li online grupne i 1 na 1 konzultacije?",
